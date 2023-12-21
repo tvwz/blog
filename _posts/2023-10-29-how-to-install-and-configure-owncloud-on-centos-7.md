@@ -54,6 +54,7 @@ $ rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 $ yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-intl php-pecl-zip
 ```
 > 若提示 “失败的软件包是：mysql-community-libs-compat-5.7.43-1.el7.x86_64”，请使用`rpm --import [https://repo.mysql.com/RPM-GPG-KEY-mysql-2022](https://repo.mysql.com/RPM-GPG-KEY-mysql-2022)`命令解决。
+{: .prompt-tip }
 
 检查 PHP 版本确保安装成功：
 ```shell
@@ -486,6 +487,7 @@ $ firewall-cmd --reload
 至此，Owncloud 已在 CentOS 7 服务器上成功安装 Nginx、php7-fpm 和 MySQL。
 
 > 若提示 php zip 模块没有安装或者 intl 模块没有安装，请运行 `yum -y install php-intl php-pecl-zip` 命令安装
+{: .prompt-tip }
 
 ## 4.FAQ
 1. ownCloud 支持多语言吗？

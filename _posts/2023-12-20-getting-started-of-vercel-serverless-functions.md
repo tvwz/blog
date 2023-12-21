@@ -2,7 +2,7 @@
 categories:
 - Serverless
 date: 2023-12-20 20:02:00 +0800
-last_modified_at: 2023-12-19 21:30:00 +0800
+last_modified_at: 2023-12-20 21:30:00 +0800
 tags:
 - Vercel
 - TypeScript
@@ -107,7 +107,7 @@ No framework detected. Default Project Settings:
 
 浏览器访问 http://localhost:3000/api/app?name=Vercel 接口，可以看到成功返回“Hello Vercel!”消息：
 
-![image-20231220125423697](../img/image-20231220125423697.png)
+![image-20231220125423697](/img/image-20231220125423697.png)
 
 ### Step 8：发布到 Vercel
 
@@ -120,21 +120,21 @@ Vercel CLI 33.0.0
 
 执行完成后，可以看到 Vercel 给我们生成了一个默认域名 `https://vercel-serverless-functions-83y10f6fk-harrison-wangs-projects.vercel.app`，我们将参数 `name` 拼接上，使用浏览器访问 `https://vercel-serverless-functions-bay.vercel.app/api/app?name=GitHub` 接口，可以看到成功返回“Hello GitHub!”消息：
 
-![image-20231220130920834](../img/image-20231220130920834.png)
+![image-20231220130920834](/img/image-20231220130920834.png)
 
 ### Step 9：绑定自定义域名
 
 打开 Vercel 地址，选中 vercel-serverless-functions 项目，点击 Manage Domains：
 
-![image-20231220140131095](../img/image-20231220140131095.png)
+![image-20231220140131095](/img/image-20231220140131095.png)
 
 添加自定义域名 `vercel.xiaowangye.org`：
 
-![image-20231220140318881](../img/image-20231220140318881.png)
+![image-20231220140318881](/img/image-20231220140318881.png)
 
 然后我们将 Vercel 提供的 CNAME 记录，添加到 Cloudflare DNS 记录：
 
-![image-20231220140533989](../img/image-20231220140533989.png)
+![image-20231220140533989](/img/image-20231220140533989.png)
 
 DNS 记录设置完成后，我们可通过地址 `https://vercel.xiaowangye.org/api/app?name=world` 访问到接口：
 
@@ -144,7 +144,7 @@ Hello world!
 ```
 
 > 出现 `DNS_PROBE_FINISHED_NXDOMAIN` 错误，是因为 DNS 同步到国内需要时间，请稍等一段时间后重试。
-
+{: .prompt-tip }
 ## 总结
 
 Vercel Serverless Functions 适用于构建轻量级、可伸缩、易于部署的服务和功能，特别适合快速原型开发和构建无服务器应用。

@@ -29,7 +29,7 @@ github:
   username: harrisonwang # change to your github username
 
 twitter:
-  username: harrisonwang # change to your twitter username
+  username: harriso09141752 # change to your twitter username
 
 social:
   # Change to your full name.
@@ -71,7 +71,7 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: https://xiaowangye.org
 
 # the avatar on sidebar, support local or CORS resources
 avatar:

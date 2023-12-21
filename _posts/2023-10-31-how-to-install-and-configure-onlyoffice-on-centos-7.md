@@ -231,7 +231,7 @@ $ firewall-cmd --reload
 然后我们通过 http://{ip}:{port}/example 访问测试示例。
 
 > 如：运行 OnlyOffice Docs 服务的主机 IP 为 192.168.1.4，服务端口为 80，这时我们可以通过 http://192.168.1.4/example 地址访问。
->
+{: .prompt-tip }
 
 OnlyOffice 默认 JWT 密钥存储在 `/etc/onlyoffice/documentserver/local.json` 配置文件的 `services.CoAuthoring.secret.inbox.string` 配置项中。
 

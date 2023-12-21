@@ -38,7 +38,7 @@ title: 如何构建和发布 npm 包到 GitHub Package Registry？
 8. 点击 General new token(classic) 创建 token
 9. 设置 GitHub token 的权限：
 
-![2023-12-20_150601](../img/2023-12-20_150601.png)
+![2023-12-20_150601](/img/2023-12-20_150601.png)
 
 - 勾选 repo 下所有权限
 - 勾选 admin:repo_hook 下所有权限
@@ -175,27 +175,27 @@ $ git push
 
 仓库首页点击 Create a new release：
 
-![image-20231220153510297](../img/image-20231220153510297.png)
+![image-20231220153510297](/img/image-20231220153510297.png)
 
 创建 Tag：
 
-![image-20231220153649146](../img/image-20231220153649146.png)
+![image-20231220153649146](/img/image-20231220153649146.png)
 
 输入版本号点击 Publish Release 发布：
 
-![image-20231220153737981](../img/image-20231220153737981.png)
+![image-20231220153737981](/img/image-20231220153737981.png)
 
 可以看到我们已经成功打包源代码包：
 
-![image-20231220153811036](../img/image-20231220153811036.png)
+![image-20231220153811036](/img/image-20231220153811036.png)
 
 然后我们在 GitHub Actions 中查看 workflow 的运行情况，可以看到已运行成功：
 
-![image-20231220154011215](../img/image-20231220154011215.png)
+![image-20231220154011215](/img/image-20231220154011215.png)
 
 至此，已成功发布到 npm 包到 GitHub Package Registry：
 
-![image-20231220154117241](../img/image-20231220154117241.png)
+![image-20231220154117241](/img/image-20231220154117241.png)
 
 ## 总结
 
