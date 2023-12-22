@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-22.04
 
     steps:
@@ -51,10 +51,6 @@ jobs:
             \-\-disable-external=true \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
-  deploy:
-    runs-on: ubuntu-22.04
-    needs: build
-    steps:
       - name: Deploy to Server
         uses: appleboy/scp-action@master
         with:
