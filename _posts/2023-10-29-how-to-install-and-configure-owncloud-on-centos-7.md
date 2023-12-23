@@ -1,8 +1,7 @@
 ---
-categories:
-- 云盘
+categories: [操作系统, 云盘]
 date: 2023-10-29 20:22:00 +0800
-last_modified_at: 2023-10-29 20:42:03 +0800
+last_modified_at: 2023-12-23 10:15:03 +0800
 tags:
 - 云盘
 - ownCloud
@@ -30,13 +29,17 @@ ownCloud 特性：
 ### 3.1.安装 Nginx
 
 在开始安装 Nginx 和 php7-fpm 之前，需要添加 EPEL 库，其中包含 CentOS 基础库中未提供的其他软件。首先，使用以下 yum 命令安装 EPEL：
+
 ```shell
 $ yum -y install epel-release
 ```
+
 然后，基于 EPEL 库安装 Nginx：
+
 ```shell
 $ yum -y install nginx
 ```
+
 ### 3.2.安装和配置 php7-fpm
 
 1.添加 php7-fpm 库
@@ -46,6 +49,7 @@ $ yum -y install nginx
 ```shell
 $ rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
+
 2.安装 php7-fpm 和 ownCloud 依赖包
 
 紧接着，安装 php7-fpm 和一些用于 ownCloud 安装的依赖软件包：
@@ -57,12 +61,14 @@ $ yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mc
 {: .prompt-tip }
 
 检查 PHP 版本确保安装成功：
+
 ```shell
 $ php -v
 PHP 7.4.33 (cli) (built: Aug  1 2023 09:00:17) ( NTS )
 Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ```
+
 3.配置 php7-fpm
 
 当前步骤中，我们将配置 php-fpm 与 nginx 一块运行。php7-fpm 将在 nginx 用户下运行，并监听 9000 端口。
@@ -71,16 +77,22 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ```shell
 $ vim /etc/php-fpm.d/www.conf
 ```
+
 在第 24 行和第 26 行中，将 user 和 group 更改为 `nginx`。
+
 ```nginx
 user = nginx
 group = nginx
 ```
+
 查看第 38 行，确保 php-fpm 在 9000 端口运行。
+
 ```nginx
 listen = 127.0.0.1:9000
 ```
+
 取消第 396-400 行的注释，开启 php-fpm 系统环境变量。
+
 ```nginx
 env[HOSTNAME] = $HOSTNAME 
 env[PATH] = /usr/local/bin:/usr/bin:/bin 
@@ -88,6 +100,7 @@ env[TMP] = /tmp
 env[TMPDIR] = /tmp 
 env[TEMP] = /tmp
 ```
+
 保存文件并推出编辑器。
 
 接下来，在 /var/lib/ 目录中为 session 创建一个新目录，并将目录所有者更改为 nginx 用户。
@@ -96,6 +109,7 @@ env[TEMP] = /tmp
 $ mkdir -p /var/lib/php/session 
 $ chown nginx:nginx -R /var/lib/php/session/
 ```
+
 4.启动 php-fpm 和 nginx
 
 启动 php-fpm 和 nginx，然后将其添加到开机自启动。
@@ -265,16 +279,21 @@ $ cd /tmp
 $ wget --no-check-certificate https://download.owncloud.com/server/stable/owncloud-10.13.0.zip
 ```
 解压 owncloud-10.13.0.zip 文件并将其移动到 /usr/share/nginx/html/ 目录：
+
 ```bash
 $ unzip owncloud-10.13.0.zip
 $ mv owncloud/ /usr/share/nginx/html/
 ```
+
 接下来，转到 nginx Web 根目录并为 owncloud 创建一个新的 data 目录。
+
 ```bash
 $ cd /usr/share/nginx/html/ 
 $ mkdir -p owncloud/data/
 ```
+
 将 owncloud 目录的所有者更改为 nginx 用户和组。
+
 ```bash
 $ chown nginx:nginx -R owncloud/
 ```
@@ -284,17 +303,23 @@ $ chown nginx:nginx -R owncloud/
 1). 生成自签名 SSL 证书
 
 在本教程中，我们将在客户端的 https 连接下运行 owncloud。您可以使用免费的 SSL 证书，例如 let's encrypt。在本教程中，我将使用 OpenSSL 命令创建我自己的 SSL 证书文件。为 SSL 文件创建一个新目录：
+
 ```shell
 $ mkdir -p /etc/nginx/cert/
 ```
+
 然后使用下面的 OpenSSL 命令生成新的 SSL 证书文件：
+
 ```shell
 $ openssl req -new -x509 -days 365 -nodes -out /etc/nginx/cert/owncloud.crt -keyout /etc/nginx/cert/owncloud.key
 ```
+
 按照 OpenSSL 命令的要求输入 SSL 证书的详细信息。然后用 `chmod` 命令将所有证书文件的权限改为 600。
+
 ```shell
 $ chmod 600 /etc/nginx/cert/*
 ```
+
 2). 在 Nginx 中配置 ownCloud 虚拟主机
 
 在步骤5中，我们下载了 ownCloud 源代码并将其配置为在 Nginx Web 服务器下运行。但我们仍然需要为ownCloud 配置虚拟主机。
@@ -304,7 +329,9 @@ $ chmod 600 /etc/nginx/cert/*
 $ cd /etc/nginx/conf.d/ 
 $ vim owncloud.conf
 ```
+
 添加以下虚拟主机配置：
+
 ```nginx
 upstream php-handler {
     server 127.0.0.1:9000;
@@ -490,6 +517,7 @@ $ firewall-cmd --reload
 {: .prompt-tip }
 
 ## 4.FAQ
+
 1. ownCloud 支持多语言吗？
 
     答：支持多语言，包含中文的支持。
@@ -514,6 +542,6 @@ $ firewall-cmd --reload
 
     答：可以，通过修改虚拟主机配置文件中相关参数。
 
-7. ownCloud 数据库连接配置信息在哪里？ 
+7. ownCloud 数据库连接配置信息在哪里？
 
     答：数据库配置信息 ownCloud 配置文件中。

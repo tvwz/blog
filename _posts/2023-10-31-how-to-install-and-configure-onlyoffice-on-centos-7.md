@@ -1,8 +1,7 @@
 ---
-categories:
-- 办公
+categories: [操作系统, Windows, 办公]
 date: 2023-10-31 19:22:00 +0800
-last_modified_at: 2023-10-31 20:00:03 +0800
+last_modified_at: 2023-12-23 10:15:03 +0800
 tags:
 - 办公
 - Office
@@ -35,7 +34,7 @@ OnlyOffice Docs是一个在线办公套件，包括文本、电子表格和演�
 
 - 添加 yum 源
 
-`/etc/yum.repos.d/nginx.repo` 文件中添加以下内容，设置 nginx yum 官方库：
+`/etc/yum.repos.d/nginx.repo`{: .filepath} 文件中添加以下内容，设置 nginx yum 官方库：
 
 ```bash
 [nginx-stable]
@@ -226,14 +225,14 @@ $ firewall-cmd --reload
 
 禁用 SELinux：
 
-编辑 `/etc/selinux/config`文件，将 `SELINUX=enforcing` 修改为 `SELINUX=disabled` 后保存，然后重启服务器使之生效。
+编辑 `/etc/selinux/config`{: .filepath} 文件，将 `SELINUX=enforcing` 修改为 `SELINUX=disabled` 后保存，然后重启服务器使之生效。
 
 然后我们通过 http://{ip}:{port}/example 访问测试示例。
 
 > 如：运行 OnlyOffice Docs 服务的主机 IP 为 192.168.1.4，服务端口为 80，这时我们可以通过 http://192.168.1.4/example 地址访问。
 {: .prompt-tip }
 
-OnlyOffice 默认 JWT 密钥存储在 `/etc/onlyoffice/documentserver/local.json` 配置文件的 `services.CoAuthoring.secret.inbox.string` 配置项中。
+OnlyOffice 默认 JWT 密钥存储在 `/etc/onlyoffice/documentserver/local.json`{: .filepath} 配置文件的 `services.CoAuthoring.secret.inbox.string` 配置项中。
 
 ```json
 {
@@ -256,4 +255,3 @@ OnlyOffice 默认 JWT 密钥存储在 `/etc/onlyoffice/documentserver/local.json
   ...
 }
 ```
-
