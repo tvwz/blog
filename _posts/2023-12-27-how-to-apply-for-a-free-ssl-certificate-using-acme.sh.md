@@ -1,7 +1,7 @@
 ---
 categories: [操作系统, Linux, Shell]
 date: 2023-12-27 14:20:00 +0800
-last_modified_at: 2023-12-27 16:48:00 +0800
+last_modified_at: 2023-12-28 08:10:00 +0800
 tags:
 - HTTP
 - SSL/TLS
@@ -123,7 +123,7 @@ $ acme.sh --install-cert -d xiaowangye.org \
 安装完成后，使用以下命令查看安装的证书信息：
 
 ```bash
-$ acme.sh --info -d xiaowangye.com
+$ acme.sh --info -d xiaowangye.org
 ```
 
 ### 2.4.Nginx SSL 证书设置
