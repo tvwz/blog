@@ -92,7 +92,7 @@ $ sudo apt install php8.1 php8.1-cli php8.1-common php8.1-json php8.1-fpm php8.1
 
 使用 acme.sh 脚本生成免费的 SSL 证书，acme.sh 安装详见 [《如何给网站添加免费的 SSL/TLS 证书？》](https://xiaowangye.org/posts/how-to-apply-for-a-free-ssl-certificate-using-acme.sh/#21%E5%AE%89%E8%A3%85-acmesh:~:text=2.1.%E5%AE%89%E8%A3%85%20acme,%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%9A)文章。
 
-**1.生成证书**
+1).生成证书
 
    ```bash
    $ acme.sh --issue -d drive.xiaowangye.org \
@@ -102,7 +102,7 @@ $ sudo apt install php8.1 php8.1-cli php8.1-common php8.1-json php8.1-fpm php8.1
 > `--force`: 表示强制颁发新的证书
 {: .prompt-tip }
 
-**2.安装证书**
+2).安装证书
 
 新建证书安装目录：
 
@@ -191,13 +191,13 @@ server {
 }
 ```
 
-3.重启 Nginx 服务
+3).重启 Nginx 服务
 
 ```bash
 $ systemctl restart nginx
 ```
 
-然后，打开 [https://drive.xiaowangye.org](https://drive.xiaowangye.org) 网页根据安装向导完成 Nextcloud 的安装，安装成功的截图如下：
+然后，打开 [https://drive.xiaowangye.org](https://drive.xiaowangye.org) 网页，根据安装向导完成 Nextcloud 的安装，安装成功的截图如下：
 
 ![image-20231230150233708](/img/image-20231230150233708.png){: .shadow }
 
