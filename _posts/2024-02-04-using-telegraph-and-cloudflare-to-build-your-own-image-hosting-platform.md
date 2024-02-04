@@ -99,7 +99,7 @@ Telegraph-Image 的图片管理功能默认是关闭的，我们需要绑定 KV 
 
 #### 4.2.开启图片审查
 
-首先，前往 [moderatecontent.com](https://moderatecontent.com) 注册并获得一个免费的用于审查图像内容的 API key：
+1.首先，前往 [moderatecontent.com](https://moderatecontent.com) 注册并获得一个免费的用于审查图像内容的 API key：
 
 2.然后，打开 <kbd>Workers 和 Pages</kbd> 的管理页面，依次点击<kbd>设置</kbd> > <kbd>环境变量</kbd> > <kbd>添加环境变量</kbd>
 
