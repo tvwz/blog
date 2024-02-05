@@ -43,7 +43,7 @@ title: 使用 Telegraph 和 Cloudflare 自建图床
 
 ![Snipaste_2024-02-04_14-57-45.png](/img/Snipaste_2024-02-04_14-57-45.png){: .shadow }
 
-然后切换到 Pages 页，点击 <kbd>Connect to Git</kbd> 按钮，选择指定仓库开始安装安装：
+然后切换到 Pages 页，点击 <kbd>Connect to Git</kbd> 按钮，选择指定仓库开始安装：
 
 ![Snipaste_2024-02-04_14-57-45](/img/Snipaste_2024-02-04_14-57-45.png){: .shadow }
 
