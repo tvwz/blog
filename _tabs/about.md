@@ -6,7 +6,7 @@ order: 4
 
 ## 个人简介
 
-我是**小王爷**，是一名软件工程师，目前在一家上市公司担任 Java 高级工程师一职。我对技术充满热情，喜欢钻研新技术，并将其应用到实际工作中。
+我是**小王爷**，是一名 Java 开发工程师。我对技术充满热情，喜欢钻研新技术，并将其应用到实际工作中。
 
 ## 博客内容
 
@@ -17,3 +17,9 @@ order: 4
 ## 结语
 
 欢迎大家访问我的博客，和我一起交流学习，共同进步，转载本站文章请注明作者和出处。
+
+## 个人工具站
+
+- [chat.xiaowangye.org](https://chat.xiaowangye.org)：个人专属 ChatGPT，支持 GPT 和 Gemini 模型。
+- [md.xiaowangye.org](https://md.xiaowangye.org)：markdown 在线编辑器，支持一键拷贝内容到微信公众号、知乎和稀土掘金。
+- [img.xiaowangye.org](https://img.xiaowangye.org)：个人专属图床，基于 Telegraph 和 Cloudflare 构建。
