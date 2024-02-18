@@ -1,12 +1,12 @@
 ---
-categories: [网络]
+categories: [计算机网络]
 date: 2024-02-18 09:38:00 +0800
-last_modified_at: 2024-02-18 11:30:00 +0800
+last_modified_at: 2024-02-18 12:37:00 +0800
 tags:
 - Cloudflare
 - Worker
 - GitHub
-title: 使用 Cloudflare Worker 镜像 GitHub 站点 
+title: 使用 Cloudflare Worker 镜像 GitHub 站点
 ---
 
 ## Cloudflare Worker 简介
