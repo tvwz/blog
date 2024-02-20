@@ -55,7 +55,7 @@ $ ngrok http 4000
 使用 ngrok 分配的固定域名运行本地应用：
 
 ```bash
-$ ngrok http --domain=kind-grubworm-fleet.ngrok-free.app 4000
+$ ngrok http --domain=xxx.ngrok-free.app 4000
 ```
 
 ### 保护应用安全
@@ -63,7 +63,7 @@ $ ngrok http --domain=kind-grubworm-fleet.ngrok-free.app 4000
 #### 使用 Google 第三方认证
 
 ```bash
-$ ngrok http --oauth=google --oauth-allow-email=harrisonwang.dev@gmail.com 4000
+$ ngrok http --oauth=google --oauth-allow-email=xxx@gmail.com 4000
 ```
 
 #### 使用账号和密码认证
