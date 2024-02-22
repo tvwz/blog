@@ -1,12 +1,14 @@
 ---
 categories: [计算机网络, 建站]
 date: 2024-02-21 08:38:00 +0800
-last_modified_at: 2024-02-21 09:17:00 +0800
+last_modified_at: 2024-02-22 13:25:00 +0800
 tags:
 - Cloudflare
 - Worker
 - Google
 title: 使用 Cloudflare Worker 代理 Google 站点
+image:
+  path: /img/google.png
 ---
 
 上一篇文章我们[使用 Cloudflare Workers 镜像了 GitHub 站点](https://xiaowangye.org/posts/using-cloudflare-worker-proxy-github/)，本文将继续使用 Cloudflare Worker 代理 Google 站点，实现在国内访问 Google。

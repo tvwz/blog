@@ -1,5 +1,5 @@
 ---
-categories: [建站]
+categories: [计算机网络, 建站]
 date: 2024-02-04 17:50:00 +0800
 last_modified_at: 2024-02-04 17:50:00 +0800
 tags:

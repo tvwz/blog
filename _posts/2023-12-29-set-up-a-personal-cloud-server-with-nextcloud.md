@@ -1,7 +1,7 @@
 ---
 categories: [操作系统, 云盘]
 date: 2023-12-29 14:03:00 +0800
-last_modified_at: 2023-12-30 14:55:00 +0800
+last_modified_at: 2024-02-22 13:23:00 +0800
 tags:
 - Nextcloud
 - 云盘
@@ -9,6 +9,8 @@ tags:
 - MySQL
 - PHP
 title: 使用 Nextcloud 搭建个人云盘服务
+image:
+  path: /img/nextcloud.png
 ---
 
 为了充分利用 VPS 服务器的资源，我决定在个人博客 Jekyll 的基础之上，搭建一个基于 Nextcloud 的个人云盘服务。本站此前发布过一篇[《如何使用 ownCloud 搭建私有云盘》](https://xiaowangye.org/posts/how-to-install-and-configure-owncloud-on-centos-7/)的文章。
