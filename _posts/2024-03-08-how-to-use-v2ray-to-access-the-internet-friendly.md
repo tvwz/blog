@@ -70,7 +70,7 @@ v2ray 支持 Windows、macOS、Android 等客户端。v2rayN 为 Windows 客户�
 
 ![V2RayN 客户端下载](/img/image-20240308140228803.png){: .shadow }
 
-> v2rayN 运行依赖 Microsoft .NET 8.0 Desktop Runtime，需要提前安装，或者直接安装含运行时依赖安装包 [zz_v2rayN-With-Core-SelfContained.7z](https://github.com/2dust/v2rayN/releases/download/6.28/zz_v2rayN-With-Core-SelfContained.7z)
+> v2rayN 运行依赖 Microsoft .NET 8.0 Desktop Runtime，需要提前安装，或者直接安装含运行时依赖安装包 [zz_v2rayN-With-Core-SelfContained.7z](https://github.com/2dust/v2rayN/releases/download/6.38/zz_v2rayN-With-Core-SelfContained.7z)
 {: .prompt-tip }
 
 2.解压安装到 D 盘，双击 v2rayN.exe 运行：
