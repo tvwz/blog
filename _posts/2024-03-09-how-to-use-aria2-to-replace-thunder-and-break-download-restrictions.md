@@ -82,12 +82,12 @@ Aria2 简单配置信息：
  RPC 端口       : 6800
  RPC 密钥       : 4b3909484fa9394c79cb
  下载目录       : /root/downloads
- AriaNg 链接    : http://ariang.js.org/#!/settings/rpc/set/ws/158.247.205.221/6800/jsonrpc/NGIzOTA5NDg0ZmE5Mzk0Yzc5Y2I=
+ AriaNg 链接    : https://ariang.js.org/#!/settings/rpc/set/ws/158.247.205.221/6800/jsonrpc/NGIzOTA5NDg0ZmE5Mzk0Yzc5Y2I=
 
 [信息] Aria2 启动成功 !
 ```
 
-我们使用其提供的[公共 AriaNg 链接](http://ariang.js.org/#!/settings/rpc/set/ws/158.247.205.221/6800/jsonrpc/NGIzOTA5NDg0ZmE5Mzk0Yzc5Y2I=)，当作前端面板使用。
+我们使用其提供的[公共 AriaNg 链接](https://ariang.js.org/#!/settings/rpc/set/ws/158.247.205.221/6800/jsonrpc/NGIzOTA5NDg0ZmE5Mzk0Yzc5Y2I=)，当作前端面板使用。
 
 ![公共 AriaNg 面板界面](/img/image-20240309204459795.png){: .shadow }
 
@@ -170,6 +170,6 @@ docker run -d \
 p3terx/ariang
 ```
 
-最后，打开 [http://158.247.205.221:6880](http://158.247.205.221:6880) 地址后显示如下：
+最后，打开 [https://158.247.205.221:6880](https://158.247.205.221:6880) 地址后显示如下：
 
 ![Docker 搭建的 AriaNg 面板](/img/image-20240309203827922.png){: .shadow }
