@@ -157,7 +157,7 @@ docker run -d \
 p3terx/aria2-pro
 ```
 
-> 请记得替换**<TOKEN>**值
+> 请记得替换 **TOKEN** 值
 {: .prompt-tip }
 
 ### 3.使用 Docker 安装 Ar­i­aNg
