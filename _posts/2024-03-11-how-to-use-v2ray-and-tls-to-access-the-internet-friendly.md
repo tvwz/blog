@@ -201,3 +201,4 @@ IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 
 ![配置优选IP](/img/image-20240311091949284.png){: .shadow }
 
 > 如何确定 IP 有没有代理 Cloudflare IP？访问 `http://<ip>/cdn-cgi/trace` 即可。
+{: .prompt-tip }
