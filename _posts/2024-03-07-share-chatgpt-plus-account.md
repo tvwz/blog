@@ -201,7 +201,7 @@ $ docker logs cws -f
 
 ![image-20240307140624816](/img/image-20240307140624816.png){: .shadow }
 
-### 6. 后台配置 CWS 
+### 6. 后台配置 CWS
 
 首先，打开 `https://chat.openai.com/api/auth/session` 页面，复制 access token：
 

@@ -11,7 +11,7 @@ tags:
 title: 如何使用 V2Ray 和 TLS 科学上网？
 ---
 
-上一篇文章《如何使用 V2Ray 科学上网？》(https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)，我介绍了如何使用 V2Ray 进行科学上网，但是在强大的 GFW 下，很容易被墙，本文将使用更加隐蔽的方式，使用 HTTPS 服务，进行流量伪装，突破网络限制。
+上一篇文章《[如何使用 V2Ray 科学上网？](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)》，我介绍了如何使用 V2Ray 进行科学上网，但是在强大的 GFW 下，很容易被墙，本文将使用更加隐蔽的方式，使用 HTTPS 服务，进行流量伪装，突破网络限制。
 
 前提条件：
 
@@ -148,7 +148,7 @@ V2ray一键脚本，运行之前请确认如下条件已经具备：
 
 我们将上面的**vmess连接**复制后导入到 V2RayN 客户端：
 
-![导入 V2RayN 客户端](/img/image-20240311084835248.png){: .shadow }
+![导入 V2RayN 客户端](/img/image-20240311094418694.png){: .shadow }
 
 依次点击<kbd>服务器</kbd> > <kbd>从剪贴板导入批量URL</kbd>，导入完成后将其设置为活动服务器：
 
