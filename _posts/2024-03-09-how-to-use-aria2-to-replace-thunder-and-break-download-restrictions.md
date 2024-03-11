@@ -157,6 +157,9 @@ docker run -d \
 p3terx/aria2-pro
 ```
 
+> 请记得替换**<TOKEN>**值
+{: .prompt-tip }
+
 ### 3.使用 Docker 安装 Ar­i­aNg
 
 AriaNg 的一款热门的前端面板，用做下载的前端页面。我们使用以下 docker 命令安装 AriaNg：
