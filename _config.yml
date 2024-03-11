@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 小王爷
-  email: blog@xiaowangye.org # change to your email address
+  email: hi@xiaowangye.org # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://xiaowangye.org
@@ -71,7 +71,7 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-# img_cdn: https://xiaowangye.org
+img_cdn: https://xiaowangye.org
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /img/avatar.jpg
