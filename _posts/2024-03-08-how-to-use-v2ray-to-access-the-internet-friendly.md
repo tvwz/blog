@@ -7,6 +7,8 @@ tags:
 - V2Ray
 - 科学上网
 title: 如何使用 V2Ray 科学上网？
+image:
+  path: /img/v2ray.png
 ---
 
 ## V2Ray 是什么？

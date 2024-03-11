@@ -9,6 +9,8 @@ tags:
 - TLS
 - Cloudflare
 title: 如何使用 V2Ray 和 TLS 科学上网？
+image:
+  path: /img/v2ray.png
 ---
 
 上一篇文章《[如何使用 V2Ray 科学上网？](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)》，我介绍了如何使用 V2Ray 进行科学上网，但是在强大的 GFW 下，很容易被墙，本文将使用更加隐蔽的方式，使用 HTTPS 服务，进行流量伪装，突破网络限制。
