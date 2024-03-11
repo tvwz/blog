@@ -21,19 +21,19 @@ title: 如何使用 V2Ray 和 TLS 科学上网？
 
 ## 操作步骤
 
-1.下载脚本：
+### 1.下载脚本
 
 ```bash
 $ wget https://raw.githubusercontent.com/HarrisonWang/v2ray/main/install_v2ray.sh
 ```
 
-2.添加可执行权限：
+### 2.添加可执行权限
 
 ```bash
 $ chmod +x install_v2ray.sh
 ```
 
-3.执行安装脚本：
+### 3.执行安装脚本
 
 ```bash
 $ ./install_v2ray.sh
@@ -144,7 +144,7 @@ V2ray一键脚本，运行之前请确认如下条件已经具备：
    vmess链接: vmess://eyAidiI6IjIiLCAicHMiOiIiLCAiYWRkIjoiMTQ5LjI4LjIzNy4yMzIiLCAicG9ydCI6IjQ0MyIsICJpZCI6IjQ2MTdkODMzLTMwYzgtNDY2OS04Y2FlLTJiNDNjYTg0ODMyOCIsICJhaWQiOiIwIiwgIm5ldCI6IndzIiwgInR5cGUiOiJub25lIiwgImhvc3QiOiJkaXNjb3Zlci53c3Muc28iLCAicGF0aCI6Ii9kaXNjb3ZlciIsICJ0bHMiOiJ0bHMiIH0=
 ```
 
-4.使用 V2RayN 客户端
+### 4.使用 V2RayN 客户端
 
 我们将上面的**vmess连接**复制后导入到 V2RayN 客户端：
 
@@ -154,7 +154,7 @@ V2ray一键脚本，运行之前请确认如下条件已经具备：
 
 ![设置为活动服务器](/img/image-20240311085300325.png){: .shadow }
 
-5.加速 VPS 的访问速度
+### 5.加速 VPS 的访问速度
 
 首先，我们加入**CF中IP发布**的 Telegram 频道 [cf_push](https://t.me/cf_push)，来获取最新（代理了 Cloudflare IP的）优选 IP 列表。
 
