@@ -6,6 +6,7 @@ tags:
 - Cloudflare
 - Pages
 - D1
+- GitHub
 title: 如何使用 Cloudflare Pages 自建短链接服务？
 ---
 
@@ -35,10 +36,13 @@ title: 如何使用 Cloudflare Pages 自建短链接服务？
 
 前提条件：
 
+- 一个 GitHub 账号
 - 一个 Cloudflare 账号
 - 一个短域名托管到 Cloudflare
 
 ### Step 1: Fork linklet 仓库
+
+仓库地址：https://github.com/harrisonwang/linklet
 
 ### Step 2: Cloudflare 控制台配置
 
