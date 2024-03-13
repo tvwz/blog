@@ -85,9 +85,9 @@ CREATE TABLE IF NOT EXISTS logs (
 
 接着点击进入部署完成的 linklet 项目，在 Cloudflare 控制台依次点击<kbd>Settings</kbd> > <kbd>Functions</kbd> > <kbd>Add bindings</kbd>，并输入 Variable name 值，选择 D1 Database，点击 <kbd>Save</kbd> 保存，设置如下表：
 
-    | Variable name | D1 database |
-    | :------------ | :---------- |
-    | DB            | linklet     |
+| Variable name | D1 database |
+| :------------ | :---------- |
+| DB            | linklet     |
 
 为了生效 D1 数据库配置，需 Cloudflare 控制台重新部署 Pages 应用。
 
