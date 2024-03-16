@@ -8,8 +8,8 @@ tags:
 - D1
 - GitHub
 title: 如何使用 Cloudflare Pages 自建短链接服务？
-image:
-  path: /img/cloudflare-pages.png
+# image:
+#   path: /img/cloudflare-pages.png
 ---
 
 ## 短链接是什么？

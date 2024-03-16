@@ -63,6 +63,7 @@ $ echo "MONGO_INITDB_DATABASE=cws" >> .env
 $ echo "MONGO_INITDB_ROOT_USERNAME=cws" >> .env
 $ echo "MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD" >> .env
 ```
+{: file="/home/ubuntu/cws/.env" }
 
 然后，编写 `/home/ubuntu/cws/docker-compose.yml`{: .filepath} 脚本：
 
@@ -109,6 +110,7 @@ services:
     volumes:
       - "./har:/root/.ninja"
 ```
+{: file="/home/ubuntu/cws/docker-compose.yml" }
 
 ### 3.构建 ninja 镜像
 
@@ -153,6 +155,7 @@ COPY --from=builder /ninja/target/release/ninja /bin/ninja
 
 ENTRYPOINT ["/bin/ninja"]
 ```
+{: file="/home/ubuntu/cws/ninja/Dockerfile" }
 
 接着，执行以下命令构建 ninja 镜像：
 
