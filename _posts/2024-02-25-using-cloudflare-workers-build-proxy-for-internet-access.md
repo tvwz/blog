@@ -14,7 +14,7 @@ image:
 
 ## 简介
 
-此前我有两篇文章，分别介绍了[《如何使用 V2Ray 科学上网？》](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)和[《利用 V2Ray 结合 WS 和 TLS 进行高效上网》](https://xiaowangye.org/posts/v2ray-combined-with-ws-and-tls-for-internet-access.md)，但这种方式需要购买 VPS 服务器。
+此前我有两篇文章，分别介绍了[《如何使用 V2Ray 科学上网？》](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)和[《利用 V2Ray 结合 WS 和 TLS 进行高效上网》](https://xiaowangye.org/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)，但这种方式需要购买 VPS 服务器。
 
 本文将介绍另外一种无需使用 VPS 服务器科学上网的方法，文章将一步步指导你配置 Cloudflare Workers 和设置 V2RayN。通过阅读本文，你将学会如何利用现代云服务，创建一个既快速又安全的个人网络节点。无论你是网络安全的新手还是有经验的专家，这篇文章都将为你提供宝贵的信息和技巧。这篇文章将探讨如何利用 Cloudflare Workers 结合 V2RayN，自建一个高效、安全的网络代理节点。
 
