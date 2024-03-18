@@ -47,7 +47,7 @@ image:
 
 4. 验证 Worker
 
-    输入 [tunnel.wss.so](https://tunnel.wss.so) 验证 Worker 服务，然后输入 https://tunnel.wss.so/<UUID> 验证节点是否正常，若无问题则显示如下：
+    输入 [tunnel.wss.so](https://tunnel.wss.so) 验证 Worker 服务，然后输入 **https://tunnel.wss.so/{UUID}** 验证节点是否正常，若无问题则显示如下：
 
     ![验证节点服务](/img/image-20240317103458169.png){: .shadow }
 
