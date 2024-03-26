@@ -240,7 +240,7 @@ $ cd dify/docker
 $ docker compose up -d
 ```
 
-4. Dify 访问
+4.Dify 访问
 
 访问 http://localhost:3000 地址使用 Docker 部署的 Dify。
 
