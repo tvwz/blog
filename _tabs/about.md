@@ -18,9 +18,9 @@ order: 4
 
 - [chat.xiaowangye.org](https://chat.xiaowangye.org)：个人专属 ChatGPT，支持 GPT 和 Gemini 模型。
 - [md.xiaowangye.org](https://md.xiaowangye.org)：markdown 在线编辑器，支持一键拷贝内容到微信公众号、知乎和稀土掘金。
-- [wb.xiaowangye.org](https://wb.xiaowangye.org)：一款手绘风格的白板工具。
+- [wb.xiaowangye.org](https://wb.xiaowangye.org)：一款手绘风格的白板工具，基于 excalidraw 构建。
 - [img.xiaowangye.org](https://img.xiaowangye.org)：个人专属图床，基于 Telegraph 和 Cloudflare 构建。
-- [linklet.pages.dev](https://linklet.pages.dev)：短网址生成器，基于 Cloudflare Pages 和 D1 构建。
+- [t.xiaowangye.org](https://t.xiaowangye.org)：短网址生成器，基于 Cloudflare Pages 和 D1 构建。
 
 ## 结语
 
