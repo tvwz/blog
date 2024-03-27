@@ -1,4 +1,4 @@
-name: "Build and Deploy"
+name: "Push to Docker Hub"
 on:
   push:
     branches:
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  push:
     runs-on: ubuntu-22.04
 
     steps:
