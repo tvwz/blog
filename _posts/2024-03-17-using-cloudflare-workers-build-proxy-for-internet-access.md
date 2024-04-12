@@ -1,7 +1,7 @@
 ---
 categories: [计算机网络]
 date: 2024-03-17 09:38:00 +0800
-last_modified_at: 2024-03-17 11:03:00 +0800
+last_modified_at: 2024-04-12 23:21:00 +0800
 tags:
 - Cloudflare
 - Workers
@@ -66,7 +66,7 @@ image:
 
 - 在 V2RayN 界面中，选择<kbd>订阅分组</kbd>→<kbd>订阅分组设置</kbd>→<kbd>添加</kbd>。
 
-- 输入别名如 **Cloudflare**，粘贴地址 https://wss.so 后点击<kbd>确认</kbd>
+- 输入别名如 **Cloudflare**，粘贴地址 **https://tunnel.wss.so/{UUID}** 后点击<kbd>确认</kbd>
 
 - 然后选择<kbd>订阅分组</kbd>→<kbd>更新当前订阅(不通过代理)</kbd>
 
