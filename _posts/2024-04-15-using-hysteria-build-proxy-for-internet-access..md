@@ -35,6 +35,9 @@ Hysteria 2 的开发目标是为用户提供一个高效、稳定、易用的网
 ```bash
 $ apt update
 $ bash <(curl -fsSL https://get.hy2.sh/)
+
+# 卸载 Hysteria
+$ bash <(curl -fsSL https://get.hy2.sh/) --remove
 ```
 
 2.启动：
