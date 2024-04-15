@@ -104,7 +104,7 @@ $ ufw allow 443/tcp
 
 #### 3.配置 Hysteria 2
 
-在  `D:\v2rayN-With-Core\bin\hysteria2`{: .filepath} 目录下新增配置文件：
+在 `D:\v2rayN-With-Core\bin\hysteria2`{: .filepath} 目录下新增配置文件：
 
 ```yaml
 server: <IP>:443
