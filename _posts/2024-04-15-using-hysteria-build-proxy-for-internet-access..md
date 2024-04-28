@@ -49,7 +49,7 @@ $ systemctl start hysteria-server
 设置为开机自动启动：
 
 ```bash
-$ systemtl enable hysteria-server
+$ systemctl enable hysteria-server
 ```
 
 3.服务端配置：
@@ -78,7 +78,8 @@ masquerade:
 ```
 {: file="/etc/hysteria/config.yaml" }
 
-> 使用 `openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/private.key -out /etc/hysteria/cert.pem -subj "/CN=bing.com" -days 36500` 命令生成自签名证书；然后使用 `chmod 777 /etc/hysteria/private.key` 命令添加权限。
+> 1. 使用 `openssl req -x509 -nodes -newkey ec:<(openssl ecparam -name prime256v1) -keyout /etc/hysteria/private.key -out /etc/hysteria/cert.pem -subj "/CN=bing.com" -days 36500` 命令生成自签名证书。
+> 2. 然后使用 `chmod 777 /etc/hysteria/private.key` 命令添加权限。
 {: .prompt-info }
 
 4.重启服务：
