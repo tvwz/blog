@@ -1,7 +1,7 @@
 ---
 categories: [计算机网络]
 date: 2024-03-17 09:38:00 +0800
-last_modified_at: 2024-04-12 23:21:00 +0800
+last_modified_at: 2024-05-21 08:34:00 +0800
 tags:
 - Cloudflare
 - Workers
@@ -13,6 +13,9 @@ image:
 ---
 
 ## 简介
+
+> [Worker 脚本](https://raw.githubusercontent.com/harrisonwang/edgetunnel/main/_worker.js)中生成的 `vless://***` 特征值已被 CF 标记，可手动修改相关代码绕过限制，参考 [3Kmfi6HP/EDtunnel#158](https://github.com/3Kmfi6HP/EDtunnel/issues/158) 修改。
+{: .prompt-tip }
 
 此前我有两篇文章，分别介绍了[《如何使用 V2Ray 科学上网？》](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)和[《利用 V2Ray 结合 WS 和 TLS 进行高效上网》](https://xiaowangye.org/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)，但这种方式需要购买 VPS 服务器。
 
