@@ -1,7 +1,7 @@
 ---
 categories: [人工智能, LLM]
 date: 2024-06-16 01:00:00 +0800
-last_modified_at: 2024-06-16 01:24:00 +0800
+last_modified_at: 2024-06-16 11:44:00 +0800
 tags:
 - ChatGPT
 - ChatGPT Plus
@@ -9,7 +9,7 @@ tags:
 - Google
 - Google Play
 - 科学上网
-title: 手机端如何安装和使用 ChatGPT APP
+title: 手机端 ChatGPT APP 如何在国内使用
 ---
 
 ## ChatGPT 介绍
