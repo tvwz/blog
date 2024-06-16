@@ -14,7 +14,7 @@ title: 手机端 ChatGPT APP 如何在国内使用
 
 ## ChatGPT 介绍
 
-ChatGPT 是 OpenAI 公司的开发的一款人工智能聊天机器人程序，而 ChatGPT APP 是其移动端的应用程序。由于 OpenAI 的限制，国内仅台湾地区可正常使用，所以在国内安装和使用 ChatGPT 是一件很麻烦的事情。本文以安卓手机为例，带大家一起完成 ChatGPT APP 的安装和使用，本文主要内容如下：
+ChatGPT 是 OpenAI 公司开发的一款人工智能聊天机器人程序，而 ChatGPT APP 是其移动端的应用程序。由于 OpenAI 的限制，国内仅台湾地区可正常使用，所以在国内安装和使用 ChatGPT 是一件很麻烦的事情。本文以安卓手机为例，带大家一起完成 ChatGPT APP 的安装和使用，本文主要内容如下：
 
 - 安装 Google Play 商店
   - 实现科学上网
