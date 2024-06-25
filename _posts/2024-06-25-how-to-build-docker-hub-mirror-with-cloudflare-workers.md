@@ -199,7 +199,7 @@ function createHomeResponse(host) {
 
 ### Step 3: 访问镜像代理首页
 
-访问域名 https://xx.xxx.xyz，可查看镜像代理的使用说明：
+访问域名 https://dp.410006.xyz，可查看镜像代理的使用说明：
 
 ![镜像代理使用说明](/img/image-20240625194226330.png){: .shadow}
 
