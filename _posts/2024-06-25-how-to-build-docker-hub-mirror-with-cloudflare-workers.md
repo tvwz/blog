@@ -1,12 +1,13 @@
 ---
 categories: [计算机网络]
 date: 2024-06-25 09:24:00 +0800
-last_modified_at: 2024-06-25 20:05:00 +0800
+last_modified_at: 2024-06-25 22:09:00 +0800
 tags:
 - Docker
 - Cloudflare
 - Worker
-title: 如何使用 Cloudflare Workers 自建镜像代理，解决 Docker Hub 访问限制
+- 代理
+title: 如何使用 Cloudflare Workers 自建 Docker 镜像代理
 ---
 
 ## 背景
