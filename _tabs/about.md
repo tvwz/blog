@@ -21,7 +21,7 @@ order: 4
 - [wb.xiaowangye.org](https://wb.xiaowangye.org)：一款手绘风格的白板工具，基于 excalidraw 和 Cloudflare Pages 构建。
 - [img.xiaowangye.org](https://img.xiaowangye.org)：个人专属图床，基于 Telegraph 和 Cloudflare Pages 构建。
 - [t.xiaowangye.org](https://t.xiaowangye.org)：短网址生成器，基于 Cloudflare Pages 和 D1 构建。
-- [memos.xiaowangye.org](https://memos.xiaowangye.org)：个人专属备忘录，基于 [memos](https://github.com/usememos/memos) 构建。
+- [x.xiaowangye.org](https://x.xiaowangye.org)：个人专属备忘录，基于 [memos](https://github.com/usememos/memos) 构建。
 
 ## 结语
 
