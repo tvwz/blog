@@ -308,6 +308,8 @@ const createNotFoundResponse = (routes) => new Response(
   }
 );
 ```
+> 请将脚本中的 `dp.410006.xyz` 替换为你的域名。
+{: .prompt-warning }
 
 ### Step 2: 绑定域名
 
