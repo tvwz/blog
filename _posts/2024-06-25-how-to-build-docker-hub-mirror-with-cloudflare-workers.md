@@ -1,7 +1,7 @@
 ---
 categories: [计算机网络]
 date: 2024-06-25 09:24:00 +0800
-last_modified_at: 2024-06-25 22:09:00 +0800
+last_modified_at: 2024-06-29 16:14:00 +0800
 tags:
 - Docker
 - Cloudflare
@@ -30,17 +30,19 @@ title: 如何使用 Cloudflare Workers 自建 Docker 镜像代理
 
 ```javascript
 addEventListener("fetch", (event) => {
-  event.passThroughOnException()
-  event.respondWith(handleRequest(event.request))
-})
+  event.passThroughOnException();
+  event.respondWith(handleRequest(event.request));
+});
 
+const dockerHub = "https://registry-1.docker.io";
 const HTML = `
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>镜像代理使用说明</title>
+    <link rel="shortcut icon" href="https://xiaowangye.org/assets/img/favicons/favicon.ico">
+    <title>Docker 镜像代理使用说明</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -104,27 +106,39 @@ const HTML = `
 </head>
 <body>
     <div class="header">
-        <h1>镜像代理使用说明</h1>
+        <h1>Docker 镜像代理使用说明</h1>
     </div>
     <div class="container">
         <div class="content">
-          <p>拉取镜像</p>
-          <pre><code># 拉取 redis 镜像
-docker pull {{host}}/library/redis
+          <h3>带镜像仓库地址使用说明</h3>
+          <p>1.拉取镜像</p>
+          <pre><code># 拉取 redis 官方镜像（不带命名空间）
+docker pull {{host}}/redis
 
-# 拉取 postgresql 镜像
-docker pull {{host}}/bitnami/postgresql</code></pre><p>重命名镜像</p>
+# 拉取 rabbitmq 官方镜像
+docker pull {{host}}/library/rabbitmq
+
+# 拉取 postgresql 非官方镜像
+docker pull {{host}}/bitnami/postgresql</code></pre><p>2.重命名镜像</p>
           <pre><code># 重命名 redis 镜像
 docker tag {{host}}/library/redis redis 
 
 # 重命名 postgresql 镜像
-docker tag {{host}}/bitnami/postgresql bitnami/postgresql</code></pre><p>添加镜像源</p>
+docker tag {{host}}/bitnami/postgresql bitnami/postgresql</code></pre><h3>镜像源方式使用说明</h3><p>1.添加镜像源</p>
           <pre><code># 添加镜像代理到 Docker 镜像源
 sudo tee /etc/docker/daemon.json &lt;&lt; EOF
 {
   "registry-mirrors": ["https://{{host}}"]
 }
-EOF</code></pre>
+EOF</code></pre><p>2.拉取镜像</p>
+<pre><code># 拉取 redis 官方镜像
+docker pull redis
+
+# 拉取 rabbitmq 非官方镜像
+docker pull bitnami/rabbitmq
+
+# 拉取 postgresql 官方镜像
+docker pull postgresql</code></pre>
         </div>
     </div>
     <div class="footer">
@@ -132,57 +146,86 @@ EOF</code></pre>
     </div>
 </body>
 </html>
-`;
+`
+
+const routes = {
+  // 替换为你的域名
+  "dp.410006.xyz": dockerHub,
+};
+
+function routeByHosts(host) {
+  if (host in routes) {
+    return routes[host];
+  }
+  return "";
+}
 
 async function handleRequest(request) {
-  const url = new URL(request.url)
-  const { host, pathname } = url
-  const registryHost = "registry-1.docker.io"
 
-  if (isRegistryPath(pathname)) {
-    const registryUrl = `https://${registryHost}${pathname}`
-    const headers = modifyRequestHeaders(request.headers, registryHost)
-    const registryRequest = createRegistryRequest(registryUrl, request, headers)
-    const registryResponse = await fetch(registryRequest)
-    
-    return createResponse(registryResponse, host)
+  const url = new URL(request.url);
+
+  if (url.pathname == "/") {
+    return handleHomeRequest(url.host);
   }
 
-  return createHomeResponse(host)
+  const upstream = routeByHosts(url.hostname);
+  if (!upstream) {
+    return createNotFoundResponse(routes);
+  }
+
+  const isDockerHub = upstream == dockerHub;
+  const authorization = request.headers.get("Authorization");
+  if (url.pathname == "/v2/") {
+    return handleFirstRequest(upstream, authorization, url.hostname);
+  }
+  // get token
+  if (url.pathname == "/v2/auth") {
+    return handleAuthRequest(upstream, url, isDockerHub, authorization);
+  }
+  // redirect for DockerHub library images
+  // Example: /v2/busybox/manifests/latest => /v2/library/busybox/manifests/latest
+  if (isDockerHub) {
+    const pathParts = url.pathname.split("/");
+    if (pathParts.length == 5) {
+      pathParts.splice(2, 0, "library");
+      const redirectUrl = new URL(url);
+      redirectUrl.pathname = pathParts.join("/");
+      return Response.redirect(redirectUrl.toString(), 301);
+    }
+  }
+  return handlePullRequest(upstream, request);
 }
 
-function isRegistryPath(pathname) {
-  return pathname.startsWith("/v2/")
+function parseAuthenticate(authenticateStr) {
+  // sample: Bearer realm="https://auth.ipv6.docker.com/token",service="registry.docker.io"
+  // match strings after =" and before "
+  const re = /(?<=\=")(?:\\.|[^"\\])*(?=")/g;
+  const matches = authenticateStr.match(re);
+  if (matches == null || matches.length < 2) {
+    throw new Error(`invalid Www-Authenticate Header: ${authenticateStr}`);
+  }
+  return {
+    realm: matches[0],
+    service: matches[1],
+  };
 }
 
-function modifyRequestHeaders(headers, registryHost) {
-  const newHeaders = new Headers(headers)
-  newHeaders.set("host", registryHost)
-  return newHeaders
+async function fetchToken(wwwAuthenticate, scope, authorization) {
+  const url = new URL(wwwAuthenticate.realm);
+  if (wwwAuthenticate.service.length) {
+    url.searchParams.set("service", wwwAuthenticate.service);
+  }
+  if (scope) {
+    url.searchParams.set("scope", scope);
+  }
+  const headers = new Headers();
+  if (authorization) {
+    headers.set("Authorization", authorization);
+  }
+  return await fetch(url, { method: "GET", headers: headers });
 }
 
-function createRegistryRequest(registryUrl, request, headers) {
-  return new Request(registryUrl, {
-    method: request.method,
-    headers: headers,
-    body: request.body,
-    redirect: "follow",
-  })
-}
-
-function createResponse(registryResponse, host) {
-  const responseHeaders = new Headers(registryResponse.headers)
-  responseHeaders.set("access-control-allow-origin", host)
-  responseHeaders.set("access-control-allow-headers", "Authorization")
-
-  return new Response(registryResponse.body, {
-    status: registryResponse.status,
-    statusText: registryResponse.statusText,
-    headers: responseHeaders,
-  })
-}
-
-function createHomeResponse(host) {
+function handleHomeRequest(host) {
   return new Response(HTML.replace(/{{host}}/g, host), {
     status: 200,
     headers: {
@@ -190,6 +233,80 @@ function createHomeResponse(host) {
     }
   })
 }
+
+async function handlePullRequest(upstream, request) {
+  const url = new URL(request.url);
+  const newUrl = new URL(upstream + url.pathname);
+  const newReq = new Request(newUrl, {
+    method: request.method,
+    headers: request.headers,
+    redirect: "follow",
+  });
+  return await fetch(newReq);
+}
+
+async function handleFirstRequest(upstream, authorization, hostname) {
+  const newUrl = new URL(upstream + "/v2/");
+  const headers = new Headers();
+  if (authorization) {
+    headers.set("Authorization", authorization);
+  }
+  // check if need to authenticate
+  const resp = await fetch(newUrl.toString(), {
+    method: "GET",
+    headers: headers,
+    redirect: "follow",
+  });
+  if (resp.status === 401) {
+      headers.set(
+        "Www-Authenticate",
+        `Bearer realm="https://${hostname}/v2/auth",service="cloudflare-docker-proxy"`
+      );
+    return new Response(JSON.stringify({ message: "Unauthorized" }), {
+      status: 401,
+      headers: headers,
+    });
+  } else {
+    return resp;
+  }
+}
+
+async function handleAuthRequest(upstream, url, isDockerHub, authorization) {
+  const newUrl = new URL(upstream + "/v2/");
+  const resp = await fetch(newUrl.toString(), {
+    method: "GET",
+    redirect: "follow",
+  });
+  if (resp.status !== 401) {
+    return resp;
+  }
+  const authenticateStr = resp.headers.get("WWW-Authenticate");
+  if (authenticateStr === null) {
+    return resp;
+  }
+  const wwwAuthenticate = parseAuthenticate(authenticateStr);
+  let scope = url.searchParams.get("scope");
+  // autocomplete repo part into scope for DockerHub library images
+  // Example: repository:busybox:pull => repository:library/busybox:pull
+  if (scope && isDockerHub) {
+    let scopeParts = scope.split(":");
+    if (scopeParts.length == 3 && !scopeParts[1].includes("/")) {
+      scopeParts[1] = "library/" + scopeParts[1];
+      scope = scopeParts.join(":");
+    }
+  }
+  return await fetchToken(wwwAuthenticate, scope, authorization);
+}
+
+const createNotFoundResponse = (routes) => new Response(
+  JSON.stringify({ routes }),
+  {
+    status: 404,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 ```
 
 ### Step 2: 绑定域名
@@ -200,7 +317,7 @@ function createHomeResponse(host) {
 
 ### Step 3: 访问镜像代理首页
 
-访问域名 https://dp.410006.xyz，可查看镜像代理的使用说明：
+访问域名 [dp.410006.xyz](https://dp.410006.xyz)，可查看镜像代理的使用说明：
 
 ![镜像代理使用说明](/img/image-20240625194226330.png){: .shadow}
 
