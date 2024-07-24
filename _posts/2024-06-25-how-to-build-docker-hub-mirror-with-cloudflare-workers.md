@@ -113,22 +113,22 @@ const HTML = `
           <h3>带镜像仓库地址使用说明</h3>
           <p>1.拉取镜像</p>
           <pre><code># 拉取 redis 官方镜像（不带命名空间）
-docker pull {{host}}/redis
+docker pull {:host}/redis
 
 # 拉取 rabbitmq 官方镜像
-docker pull {{host}}/library/rabbitmq
+docker pull {:host}/library/rabbitmq
 
 # 拉取 postgresql 非官方镜像
-docker pull {{host}}/bitnami/postgresql</code></pre><p>2.重命名镜像</p>
+docker pull {:host}/bitnami/postgresql</code></pre><p>2.重命名镜像</p>
           <pre><code># 重命名 redis 镜像
-docker tag {{host}}/library/redis redis 
+docker tag {:host}/library/redis redis 
 
 # 重命名 postgresql 镜像
-docker tag {{host}}/bitnami/postgresql bitnami/postgresql</code></pre><h3>镜像源方式使用说明</h3><p>1.添加镜像源</p>
+docker tag {:host}/bitnami/postgresql bitnami/postgresql</code></pre><h3>镜像源方式使用说明</h3><p>1.添加镜像源</p>
           <pre><code># 添加镜像代理到 Docker 镜像源
 sudo tee /etc/docker/daemon.json &lt;&lt; EOF
 {
-  "registry-mirrors": ["https://{{host}}"]
+  "registry-mirrors": ["https://{:host}"]
 }
 EOF</code></pre><p>2.拉取镜像</p>
 <pre><code># 拉取 redis 官方镜像
@@ -226,7 +226,7 @@ async function fetchToken(wwwAuthenticate, scope, authorization) {
 }
 
 function handleHomeRequest(host) {
-  return new Response(HTML.replace(/{{host}}/g, host), {
+  return new Response(HTML.replace(/{:host}/g, host), {
     status: 200,
     headers: {
       "content-type": "text/html",
