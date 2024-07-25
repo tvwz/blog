@@ -60,7 +60,7 @@ $ systemctl restart docker
 
 ![docker pull 请求抓包](/img/image-20240724092538691.png){: .shadow}
 
-Docker 镜像拉取过程中的网络请求主要包含认证、镜像元素据获取、配置文件获取和镜像层下载四个阶段，具体的过程如下：
+Docker 镜像拉取过程中的网络请求主要包含认证、镜像元数据获取、配置文件获取和镜像层下载四个阶段，具体的过程如下：
 
 1. 认证过程：
    - Docker Client 首先向 Docker Registry 发送请求。
@@ -678,46 +678,12 @@ Status: Downloaded newer image for hello-world:latest
 docker.io/library/hello-world:latest
 ```
 
-## 四、附录：HTTP 测试脚本
+## 四、附录
 
-```http
-@baseUrl = https://registry-1.docker.io/v2
+1. [Nginx 代理配置](https://gist.github.com/harrisonwang/23f253bfd9dba388e4d84ee5fdc3ab46)
 
-@token = 
+2. TODO：OpenResty 代理脚本
 
-@manifest_digest = 
+3. [Cloudflare Worker 脚本](https://gist.github.com/harrisonwang/1f0583e65277203364c9c22a44c2ba44)
 
-@first_manifest_digest = 
-
-@config_digest = 
-
-# 存在多个层时，需要获取每个层的digest
-@layer_digest = 
-
-### 1.质询（challenge）
-GET {{baseUrl}}/
-
-### 2.获取令牌（token）
-GET https://auth.docker.io/token?scope=repository%3Alibrary%2Fhello-world%3Apull&service=registry.docker.io
-
-### 3.获取镜像摘要（digest）
-HEAD {{baseUrl}}/library/hello-world/manifests/latest HTTP/1.1
-Authorization: Bearer {{token}}
-
-### 4.获取镜像清单（manifest）
-GET {{baseUrl}}/library/hello-world/manifests/{{manifest_digest}} HTTP/1.1
-Authorization: Bearer {{token}}
-
-### 5.获取首层镜像清单
-GET {{baseUrl}}/library/hello-world/manifests/{{first_manifest_digest}} HTTP/1.1
-Authorization: Bearer {{token}}
-Accept: application/vnd.oci.image.manifest.v1+json
-
-### 6.获取镜像配置信息
-GET {{baseUrl}}/library/hello-world/blobs/{{config_digest}} HTTP/1.1
-Authorization: Bearer {{token}}
-
-### 7.获取镜像层数据
-GET {{baseUrl}}/library/hello-world/blobs/{{layer_digest}} HTTP/1.1
-Authorization: Bearer {{token}}
-```
+4. [HTTP 测试脚本](https://gist.github.com/harrisonwang/c735b089c75857aa96e51596e408509b)
