@@ -1,13 +1,12 @@
 ---
 categories: [计算机网络]
 date: 2024-07-25 14:14:00 +0800
-last_modified_at: 2024-07-25 14:40:00 +0800
+last_modified_at: 2024-07-26 19:55:00 +0800
 tags:
 - Docker
 - Cloudflare
 - Worker
 - Nginx
-- OpenResty
 - 代理
 title: 解决国内无法下载 Docker 镜像的问题
 ---
@@ -16,7 +15,7 @@ title: 解决国内无法下载 Docker 镜像的问题
 
 ## 一、Docker 拉取镜像请求分析
 
-目前网上流传的 Docker 镜像代理方式主要分为 Nginx 和 Cloudflare Worker 两种方式，本着对技术的好奇心，让我们来分析其原理，然后分别通过 Nginx、OpenResty、Cloudflare Worker 实现 Docker 镜像代理。
+目前网上流传的 Docker 镜像代理方式主要分为 Nginx 和 Cloudflare Worker 两种方式，本着对技术的好奇心，让我们来分析其原理，然后分别通过 Nginx、Cloudflare Worker 实现 Docker 镜像代理。
 
 为了分析其原理，我们需要先了解 docker pull 命令执行时的网络请求，这里我们首先在 Docker 客户端安装好 mitmproxy 工具。
 
@@ -413,13 +412,9 @@ http {
 
 - 二是存在客户端直接发往 docker 认证服务器的请求，一旦 `auth.docker.io` 也被封锁，会导致代理站无法正常使用。
 
-为了解决上面的两个问题，下面我们将 Nginx 换成 OpenResty 或者 Cloudflare Worker 来实现镜像代理。
+为了解决上面的两个问题，下面我们将 Nginx 换成 Cloudflare Worker 来实现镜像代理。
 
-### 2.使用 OpenResty 自建 Docker 镜像代理
-
-TODO.
-
-### 3.使用 Cloudflare Worker 自建 Docker 镜像代理
+### 2.使用 Cloudflare Worker 自建 Docker 镜像代理
 
 使用 Cloudflare Worker 代理后，Docker 拉取镜像的网络请求时序图如下：
 
@@ -621,10 +616,9 @@ function home(host) {
 2. 处理获取令牌请求，对于 scope 参数，为没有命名空间的镜像添加 library/ 前缀，然后将请求转发到 Docker 的获取令牌服务。
 3. 对于没有命名空间的镜像请求，会自动添加 library 命名空间，将请求转发到 Docker Registry 并返回响应或跟随重定向（Worker 内部重定向）后返回响应。
 
-
 ## 三、直接使用代理
 
-#### 1.搭建 Trojan 服务端
+### 1.搭建 Trojan 服务端
 
 ```bash
 # 下载一键安装脚本
@@ -637,7 +631,7 @@ $ chmod +x install_v2ray.sh
 $ ./install_v2ray.sh
 ```
 
-#### 2.安装 Trojan 客户端
+### 2.安装 Trojan 客户端
 
 ```bash
 # 安装 Trojan
@@ -651,7 +645,7 @@ $ vim /usr/local/etc/trojan/config.json
 $ systemctl start trojan
 ```
 
-#### 3.Docker 客户端代理配置
+### 3.Docker 客户端代理配置
 
 ```bash
 $ tee /etc/docker/daemon.json << EOF
@@ -666,7 +660,7 @@ $ tee /etc/docker/daemon.json << EOF
 $ systemctl restart docker
 ```
 
-#### 4.测试拉取镜像
+### 4.测试拉取镜像
 
 ```bash
 $ docker pull hello-world
@@ -682,8 +676,6 @@ docker.io/library/hello-world:latest
 
 1. [Nginx 代理配置](https://gist.github.com/harrisonwang/23f253bfd9dba388e4d84ee5fdc3ab46)
 
-2. TODO：OpenResty 代理脚本
+2. [docker-proxy-worker](https://github.com/HarrisonWang/docker-proxy-worker)
 
-3. [Cloudflare Worker 脚本](https://gist.github.com/harrisonwang/1f0583e65277203364c9c22a44c2ba44)
-
-4. [HTTP 测试脚本](https://gist.github.com/harrisonwang/c735b089c75857aa96e51596e408509b)
+3. [HTTP 测试脚本](https://gist.github.com/harrisonwang/c735b089c75857aa96e51596e408509b)
