@@ -8,7 +8,7 @@ tags:
 - function calling
 - 函数调用
 - Next.js
-title: OpenAI Function Calling 实践
+title: OpenAI function calling 实践
 ---
 
 **OpenAI 的 function calling 是什么？**
