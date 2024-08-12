@@ -1,7 +1,7 @@
 ---
 categories: [人工智能, LLM]
 date: 2024-08-10 14:37:00 +0800
-last_modified_at: 2024-08-10 16:02:00 +0800
+last_modified_at: 2024-08-12 23:41:00 +0800
 tags:
 - OpenAI
 - GPT
@@ -29,10 +29,10 @@ title: Next.js 快速集成 OpenAI Function Calling 实践
 
 无函数调用的时候，对话处理过程如下：
 
-1. 客户端发送请求到聊天服务器
-2. 聊天服务器发送 user 提示词给 GPT API
-3. GPT API 将 assistant 提示词返回聊天服务器
-4. 聊天服务器将 assistant 提示词返回给用户
+1. Client 发送请求到 Chat Server
+2. Chat Server 发送 Prompt 给 OpenAI Server
+3. OpenAI Server 响应文本给 Chat Server
+4. Chat Server 将响应结果返回给用户
 5. 重复执行
 
 首次请求如下：
@@ -98,12 +98,12 @@ export default async function createMessage(req: NextApiRequest, res: NextApiRes
 
 有函数调用的时候，对话处理过程如下：
 
-1. 客户端发送用户提示词到 Chat Server
-2. Chat Server 将用户提示词和可调用的函数一并发送给 GPT
-3. GPT 模型根据用户的提示词，判断是用普通文本响应还是函数调用的格式响应
-4. 如果是函数调用格式，那么 Chat Server 就会执行这个函数，并将结果再次发送给 GPT
-5. GPT 模型根据提供的数据，使用普通文本响应
-6. 重复执行
+1. Client 发送 user prompt 到 Chat Server
+2. Chat Server 将用户提示词和函数定义一并发送给 OpenAI Server
+3. OpenAI Server 根据用户的提示词，判断是用普通文本响应还是函数调用的格式响应
+4. 如果是函数调用则返回调用的函数名及参数，Chat Server 执行该函数，并将结果再次发送给 OpenAI
+5. 如果需要调用多个函数，则重复执行 3-4 步
+6. OpenAI Server 根据提供的数据，使用普通文本响应
 
 首次请求如下：
 
