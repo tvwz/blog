@@ -10,7 +10,7 @@ order: 4
 
 ## 关于博客
 
-言外之音于 2023 年 10 月建立，起初博客名为小王爷，域名是 xiaowangye.org，寓意能像小王爷一样生活轻松惬意。12 月之前一直使用[黄玄](http://huangxuan.me/)的开源博客主题 [huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)。
+言外之音于 2023 年 10 月建立，起初博客名为小王爷，域名是 xiaowangye.org，寓意能像小王爷一样生活轻松惬意。12 月之前一直使用[黄玄](https://huangxuan.me/)的开源博客主题 [huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)。
 
 12 月在 GitHub 上找到一款很漂亮的主题 [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy)，随后将博客迁移到该模板 [chirpy-starter](https://github.com/cotes2020/chirpy-starter) ，一直沿用至今。
 
