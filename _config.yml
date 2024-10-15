@@ -14,12 +14,12 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 小王爷 # the main title
+title: 言外之音 # the main title
 
 tagline: 小王爷的博客 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  这里是小王爷的个人博客，与您一起探索未知的网络世界，做一个有个性的程序员。
+  聆听技术背后未尽之言，传递思想深处智慧之声。
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
