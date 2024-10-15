@@ -57,7 +57,7 @@ title: 使用 Telegraph 和 Cloudflare 自建图床
 
 ![Snipaste_2024-02-04_15-38-00.png](/img/Snipaste_2024-02-04_15-38-00.png){: .shadow }
 
-完成绑定后，可通过 [img.xiaowangye.org](https://img.xiaowangye.org) 访问，访问页面如下图：
+完成绑定后，可通过 [img.voxsay.com](https://img.voxsay.com) 访问，访问页面如下图：
 
 ![Snipaste_2024-02-04_14-40-04.png](/img/Snipaste_2024-02-04_14-40-04.png){: .shadow }
 

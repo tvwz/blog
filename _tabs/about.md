@@ -16,15 +16,14 @@ order: 4
 
 ## 个人工具站
 
-- [x.xiaowangye.org](https://x.xiaowangye.org)：个人专属备忘录，基于 [memos](https://github.com/usememos/memos) 构建。
-- [chat.xiaowangye.org](https://chat.xiaowangye.org)：个人专属 ChatGPT，支持 GPT 模型，基于 Vercel 构建。
-- [url.xiaowangye.org](https://url.xiaowangye.org)：短网址生成器 v2，基于 [Vercel](https://vercel.com/) 和 [Supabase](https://supabase.com/) 构建。
-- [t.xiaowangye.org](https://t.xiaowangye.org)：短网址生成器 v1，基于 Cloudflare Pages 和 D1 构建。
-- [s.xiaowangye.org](https://s.xiaowangye.org)：个人专属搜索引擎，基于 Google Custom Search Engine 构建。
-- [avatar.xiaowangye.org](https://avatar.xiaowangye.org)：Notion 风格头像生成器。
-- [img.xiaowangye.org](https://img.xiaowangye.org)：个人专属图床，基于 Telegraph 和 Cloudflare Pages 构建。
-- [md.xiaowangye.org](https://md.xiaowangye.org)：markdown 在线编辑器，支持一键拷贝内容到微信公众号、知乎和稀土掘金。
-- [wb.xiaowangye.org](https://wb.xiaowangye.org)：一款手绘风格的白板工具，基于 excalidraw 和 Cloudflare Pages 构建。
+- [x.voxsay.com](https://x.voxsay.com)：个人专属备忘录，基于 [memos](https://github.com/usememos/memos) 构建。
+- [chat.voxsay.com](https://chat.voxsay.com)：个人专属 ChatGPT，支持 GPT 模型，基于 [Vercel](https://vercel.com/) 和 [Vercel ai-chatbot](https://github.com/vercel/ai-chatbot) 构建。
+- [t.voxsay.com](https://t.voxsay.com)：短网址生成器，基于 [Vercel](https://vercel.com/) 和 [Supabase](https://supabase.com/) 构建。
+- [s.voxsay.com](https://s.voxsay.com)：个人专属搜索引擎，基于 [Google Custom Search Engine](https://programmablesearchengine.google.com/controlpanel/all) 和 [luxify-search](https://github.com/harrisonwang/luxify-search) 构建。
+- [avatar.voxsay.com](https://avatar.voxsay.com)：Notion 风格头像生成器，基于 [Vercel](https://vercel.com/) 和 [notion-avatar](https://github.com/harrisonwang/notion-avatar) 构建。
+- [img.voxsay.com](https://img.voxsay.com)：个人专属图床，基于 [Cloudflare Pages](https://pages.cloudflare.com/) 和 [Telegraph](https://telegra.ph/) 构建。
+- [md.voxsay.com](https://md.voxsay.com)：markdown 在线编辑器，支持一键拷贝内容到微信公众号、知乎和稀土掘金。
+- [wb.voxsay.com](https://wb.voxsay.com)：一款手绘风格的白板工具，基于 excalidraw 和 Cloudflare Pages 构建。
 
 ## 结语
 

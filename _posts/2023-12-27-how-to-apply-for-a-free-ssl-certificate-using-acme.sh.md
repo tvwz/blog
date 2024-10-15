@@ -19,7 +19,7 @@ image:
 
 ## 1.基本概念和术语
 
-要详细了解 SSL/TLS ，参见 [互联网是如何工作的？](https://xiaowangye.org/posts/how-does-internet-work/#8使用-ssltls-确保互联网通信安全) 介绍。以下是一些关键术语和概念 ：
+要详细了解 SSL/TLS ，参见 [互联网是如何工作的？](https://voxsay.com/posts/how-does-internet-work/#8使用-ssltls-确保互联网通信安全) 介绍。以下是一些关键术语和概念 ：
 
 - HTTP：超文本传输协议用于在客户端（如网络浏览器）和服务器（如网站）之间传输数据。
 
@@ -38,7 +38,7 @@ image:
 acme.sh 安装特别简单，只需运行以下的命令：
 
 ```bash
-$ curl https://get.acme.sh | sh -s email=my@xiaowangye.org
+$ curl https://get.acme.sh | sh -s email=hi@voxsay.com
 ```
 
 > 普通用户和 root 用户均可安装使用。
@@ -56,11 +56,11 @@ acme.sh 实现了 ACME 支持的所有验证协议，包括 HTTP 和 DNS 验证�
 1).HTTP 验证
 
 ```bash
-$ acme.sh --issue -d xiaowangye.org -d www.xiaowangye.org --webroot /usr/share/nginx/html/
+$ acme.sh --issue -d voxsay.com --webroot /usr/share/nginx/html/
 ```
 
 - `--issue`：表示发起签发证书请求
-- `-d xiaowangye.org`：指定要签发证书的域名
+- `-d voxsay.com`：指定要签发证书的域名
 - `--webroot /usr/share/nginx/html/`：指定用于 ACME 验证的网站根目录，以证明域名的所有权。
 
 对于 Apache 和 Nginx 服务器，支持以下智能方式完成验证（**无需手动指定网站根目录**）
@@ -68,13 +68,13 @@ $ acme.sh --issue -d xiaowangye.org -d www.xiaowangye.org --webroot /usr/share/n
 Apache 服务器：
 
 ```bash
-$ acme.sh --issue -d xiaowangye.org --apache
+$ acme.sh --issue -d voxsay.com --apache
 ```
 
 Nginx 服务器：
 
 ```bash
-$ acme.sh --issue -d xiaowangye.org --nginx
+$ acme.sh --issue -d voxsay.com --nginx
 ```
 
 > acme.sh 完成验证后，会恢复原有的 Nginx 或 Apache 配置（为了配置安全），需要手动添加 SSL 的配置。
@@ -83,7 +83,7 @@ $ acme.sh --issue -d xiaowangye.org --nginx
 若无任何 Web 服务器，且 80 端口空闲，acme.sh 还支持假装一个 Web 服务器完成验证：
 
 ```bash
-$ acme.sh --issue -d xiaowangye.org --standalone
+$ acme.sh --issue -d voxsay.com --standalone
 ```
 
 2).DNS 验证
@@ -91,7 +91,7 @@ $ acme.sh --issue -d xiaowangye.org --standalone
 手动在域名上添加一条 txt 解析记录，以验证域名所有权。然后执行以下命令请求 Let's Encrypt 的证书：
 
 ```bash
-$ acme.sh --issue --dns -d xiaowangye.org \
+$ acme.sh --issue --dns -d voxsay.com \
  --yes-I-know-dns-manual-mode-enough-go-ahead-please
 ```
 
@@ -114,16 +114,16 @@ $ acme.sh --renew -d xiaowangye \
 将证书安装到 /etc/certs 目录：
 
 ```bash
-$ acme.sh --install-cert -d xiaowangye.org \
-         --key-file /etc/certs/xiaowangye.org.key \
-         --fullchain-file /etc/certs/xiaowangye.org.pem \
+$ acme.sh --install-cert -d voxsay.com \
+         --key-file /etc/certs/voxsay.com.key \
+         --fullchain-file /etc/certs/voxsay.com.pem \
          --reloadcmd "systemctl force-reload nginx"
 ```
 
 安装完成后，使用以下命令查看安装的证书信息：
 
 ```bash
-$ acme.sh --info -d xiaowangye.org
+$ acme.sh --info -d voxsay.com
 ```
 
 ### 2.4.Nginx SSL 证书设置
@@ -131,8 +131,8 @@ $ acme.sh --info -d xiaowangye.org
 ```nginx
 server {
 ...
-    ssl_certificate /etc/certs/xiaowangye.org.pem;
-    ssl_certificate_key /etc/certs/xiaowangye.org.key;
+    ssl_certificate /etc/certs/voxsay.com.pem;
+    ssl_certificate_key /etc/certs/voxsay.com.key;
 }
 ```
 

@@ -30,7 +30,7 @@ Google CSE 的全称是 **Google Custom Search Engine**，即 Google 自定义�
 
 点击 `重试部署` 重新部署项目。部署完成后，访问 `https://<your-username>.pages.dev` 即可看到自定义搜索引擎。
 
-为了方便记忆，绑定一个自定义域名，比如 [s.xiaowangye.org](https://s.xiaowangye.org)。
+为了方便记忆，绑定一个自定义域名，比如 [s.voxsay.com](https://s.voxsay.com)。
 
 ## 四、屏蔽低质量站点
 

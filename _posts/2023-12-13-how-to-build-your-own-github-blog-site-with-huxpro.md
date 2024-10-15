@@ -37,11 +37,11 @@ Fork 完成后等待站点完成发布，最长可能需要 10 分钟才会发�
 
 ## 2.使用个人域名
 
-DNS 添加一条 **CNAME** 记录，例如我将 **harrisonwang.github.io** 个人博客站点绑定到个人域名 **xiaowangye.org**：
+DNS 添加一条 **CNAME** 记录，例如我将 **harrisonwang.github.io** 个人博客站点绑定到个人域名 **voxsay.com**：
 
 ![image-20231215092737042](/img/image-20231215092737042.png){: .shadow }
 
-修改 GitHub 仓库下的 **CNAME** 文件，修改为个人域名 **xiaowangye.org**：
+修改 GitHub 仓库下的 **CNAME** 文件，修改为个人域名 **voxsay.com**：
 
 ![image-20231215092240283](/img/image-20231215092240283.png){: .shadow }
 
@@ -58,7 +58,7 @@ DNS 添加一条 **CNAME** 记录，例如我将 **harrisonwang.github.io** 个�
 **SERVER_SSH_KEY** 需要在个人主机上生成，可通过下面的命令生成：
 
 ```bash
-$ ssh-keygen -t rsa -b 4096 -C "harrisonwang@163.com" -f github-deploy-key
+$ ssh-keygen -t rsa -b 4096 -C "hi@voxsay.com" -f github-deploy-key
 ```
 
 查看 `.ssh` 目录，可以看到生成了一个公钥 **github-deploy-key.pub** 和私钥文件 **github-deploy-key**：

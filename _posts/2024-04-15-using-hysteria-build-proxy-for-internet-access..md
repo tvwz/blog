@@ -22,7 +22,7 @@ Hysteria 2 的主要特点包括：
 
 Hysteria 2 的开发目标是为用户提供一个高效、稳定、易用的网络加速工具，以满足不同的网络需求。
 
-此前我已经有三篇文章分别介绍了[《如何使用 V2Ray 科学上网？》](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)、[《利用 V2Ray 结合 WS 和 TLS 进行高效上网》](https://xiaowangye.org/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)和[《使用 Cloudflare Workers 自建节点科学上网》](https://xiaowangye.org/posts/using-cloudflare-workers-build-proxy-for-internet-access/)，本文将使用另一个无需自定义域名的工具 [Hysteria 2](https://github.com/apernet/hysteria) 进行科学上网。前提条件：
+此前我已经有三篇文章分别介绍了[《如何使用 V2Ray 科学上网？》](https://voxsay.com/posts/how-to-use-v2ray-to-access-the-internet-friendly/)、[《利用 V2Ray 结合 WS 和 TLS 进行高效上网》](https://voxsay.com/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)和[《使用 Cloudflare Workers 自建节点科学上网》](https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/)，本文将使用另一个无需自定义域名的工具 [Hysteria 2](https://github.com/apernet/hysteria) 进行科学上网。前提条件：
 
 - 一台可“上网”的 VPS 服务器
 

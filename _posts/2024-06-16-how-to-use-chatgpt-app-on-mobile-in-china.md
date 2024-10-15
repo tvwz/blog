@@ -36,10 +36,10 @@ ChatGPT 是 OpenAI 公司开发的一款人工智能聊天机器人程序，而 
 
 自 2010 年以来，由于受“[谷歌退出中国大陆事件](https://zh.wikipedia.org/wiki/%E8%B0%B7%E6%AD%8C%E9%80%80%E5%87%BA%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E4%BA%8B%E4%BB%B6#:~:text=%E8%B0%B7%E6%AD%8C%E9%80%80%E5%87%BA%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E4%BA%8B%E4%BB%B6%E6%98%AF,%E5%A2%83%E5%A4%96%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BA%A7%E5%93%81%5B3%5D%E3%80%82)”的影响，国内销售的手机均无法下载和安装 Google Play 商店，且 Google 旗下产品，无论网站还是应用，基本都被国内[防火长城](https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E#:~:text=%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E%5B1,%E6%9C%8D%E5%8A%A1%E7%9A%84%E8%A1%8C%E4%B8%BA%E3%80%82)所屏蔽。因此，要正常使用 Google Play，需使用翻墙工具来突破网络限制，翻墙工具的使用，请参考以下文章：
 
-- [如何使用 V2Ray 科学上网？](https://xiaowangye.org/posts/how-to-use-v2ray-to-access-the-internet-friendly/)
-- [利用 V2Ray 结合 WS 和 TLS 进行高效上网](https://xiaowangye.org/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)
-- [使用 Cloudflare Workers 自建节点科学上网](https://xiaowangye.org/posts/using-cloudflare-workers-build-proxy-for-internet-access/)
-- [使用 Hysteria 自建节点科学上网](https://xiaowangye.org/posts/using-hysteria-build-proxy-for-internet-access/)
+- [如何使用 V2Ray 科学上网？](https://voxsay.com/posts/how-to-use-v2ray-to-access-the-internet-friendly/)
+- [利用 V2Ray 结合 WS 和 TLS 进行高效上网](https://voxsay.com/posts/v2ray-combined-with-ws-and-tls-for-internet-access/)
+- [使用 Cloudflare Workers 自建节点科学上网](https://voxsay.com/posts/using-cloudflare-workers-build-proxy-for-internet-access/)
+- [使用 Hysteria 自建节点科学上网](https://voxsay.com/posts/using-hysteria-build-proxy-for-internet-access/)
 
 > 请选用美国 VPS 来搭建代理工具。
 {: .prompt-tip }

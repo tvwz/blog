@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://xiaowangye.org"
+url: "https://voxsay.com"
 
 github:
   username: harrisonwang # change to your github username
@@ -35,10 +35,10 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 小王爷
-  email: hi@xiaowangye.org # change to your email address
+  email: hi@voxsay.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://xiaowangye.org
+    - https://voxsay.com
     #- https://twitter.com/harrisonwang
     - https://github.com/harrisonwang # change to your github homepage
     # Uncomment below to add more social links
@@ -71,7 +71,7 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: https://xiaowangye.org
+img_cdn: https://voxsay.com
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /img/avatar.jpg
@@ -90,7 +90,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: harrisonwang/xiaowangye.org
+    repo: harrisonwang/voxsay.com
     repo_id: R_kgDOK73NJQ
     category: Announcements
     category_id: DIC_kwDOK73NJc4Cb4dW
@@ -99,7 +99,7 @@ comments:
     lang: zh-CN # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
   remark42:
-    host: "https://c.xiaowangye.org"
+    host: "https://c.voxsay.com"
     site_id: xiaowangye
     max_shown_comments: 20
     theme: auto # 'light', 'dark', or 'auto'

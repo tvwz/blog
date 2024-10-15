@@ -127,7 +127,7 @@ Vercel CLI 33.0.0
 
 ![image-20231220140131095](/img/image-20231220140131095.png){: .shadow }
 
-添加自定义域名 `vercel.xiaowangye.org`：
+添加自定义域名 `vercel.voxsay.com`：
 
 ![image-20231220140318881](/img/image-20231220140318881.png){: .shadow }
 
@@ -135,10 +135,10 @@ Vercel CLI 33.0.0
 
 ![image-20231220140533989](/img/image-20231220140533989.png){: .shadow }
 
-DNS 记录设置完成后，我们可通过地址 `https://vercel.xiaowangye.org/api/app?name=world` 访问到接口：
+DNS 记录设置完成后，我们可通过地址 `https://vercel.voxsay.com/api/app?name=world` 访问到接口：
 
 ```bash
-$ curl https://vercel.xiaowangye.org/api/app?name=world
+$ curl https://vercel.voxsay.com/api/app?name=world
 Hello world!
 ```
 

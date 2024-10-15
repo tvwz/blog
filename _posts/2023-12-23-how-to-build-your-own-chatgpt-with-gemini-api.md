@@ -81,7 +81,7 @@ Gemini 是一个由 Google 开发的大型语言模型，支持多模态（文�
 
 ![image-20231223120146151](/img/image-20231223120146151.png){: .shadow }
 
-然后，点击 <kbd>Manage Domains</kbd> 进入页面绑定专属域名，如下图所示我添加的是 gemini.xiaowangye.org 专属域名：
+然后，点击 <kbd>Manage Domains</kbd> 进入页面绑定专属域名，如下图所示我添加的是 gemini.voxsay.com 专属域名：
 
 ![image-20231223120338084](/img/image-20231223120338084.png){: .shadow }
 
@@ -89,7 +89,7 @@ Gemini 是一个由 Google 开发的大型语言模型，支持多模态（文�
 
 ![image-20231223121023832](/img/image-20231223121023832.png){: .shadow }
 
-DNS 生效后，可通过 [https://gemini.xiaowangye.org](https://gemini.xiaowangye.org) 专属域名访问：
+DNS 生效后，可通过 [https://gemini.voxsay.com](https://gemini.voxsay.com) 专属域名访问：
 
 ![image-20231223121358809](/img/image-20231223121358809.png){: .shadow }
 

@@ -11,7 +11,7 @@ image:
   path: /img/google.png
 ---
 
-上一篇文章我们[使用 Cloudflare Workers 镜像了 GitHub 站点](https://xiaowangye.org/posts/using-cloudflare-worker-proxy-github/)，本文将继续使用 Cloudflare Worker 代理 Google 站点，实现在国内访问 Google。
+上一篇文章我们[使用 Cloudflare Workers 镜像了 GitHub 站点](https://voxsay.com/posts/using-cloudflare-worker-proxy-github/)，本文将继续使用 Cloudflare Worker 代理 Google 站点，实现在国内访问 Google。
 
 ## 代理 Google 站点
 

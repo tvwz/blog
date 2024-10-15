@@ -41,7 +41,7 @@ const HTML = `
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://xiaowangye.org/assets/img/favicons/favicon.ico">
+    <link rel="shortcut icon" href="https://voxsay.com/assets/img/favicons/favicon.ico">
     <title>Docker 镜像代理使用说明</title>
     <style>
         body {
@@ -142,7 +142,7 @@ docker pull postgresql</code></pre>
         </div>
     </div>
     <div class="footer">
-        <p>©2024 <a href="https://xiaowangye.org">xiaowangye.org</a>. All rights reserved. Powered by <a href="https://cloudflare.com">Cloudflare</a>.</p>
+        <p>©2024 <a href="https://voxsay.com">voxsay.com</a>. All rights reserved. Powered by <a href="https://cloudflare.com">Cloudflare</a>.</p>
     </div>
 </body>
 </html>

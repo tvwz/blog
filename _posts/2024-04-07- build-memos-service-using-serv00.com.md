@@ -124,7 +124,7 @@ $ ./cloudflared tunnel --edge-ip-version auto --protocol http2 --heartbeat-inter
 
 ![配置](/img/image-20240407152803280.png){: .shadow }
 
-> 注意：域名必须包含 / 结束符，如：https://memos.xiaowangye.org/
+> 注意：域名必须包含 / 结束符，如：https://memos.voxsay.com/
 {: .prompt-info }
 
 配置完成后，我们可以很方便的使用浏览器插件发布 memos 了：

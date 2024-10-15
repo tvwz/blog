@@ -13,7 +13,7 @@ image:
   path: /img/nextcloud.png
 ---
 
-为了充分利用 VPS 服务器的资源，我决定在个人博客 Jekyll 的基础之上，搭建一个基于 Nextcloud 的个人云盘服务。本站此前发布过一篇[《如何使用 ownCloud 搭建私有云盘》](https://xiaowangye.org/posts/how-to-install-and-configure-owncloud-on-centos-7/)的文章。
+为了充分利用 VPS 服务器的资源，我决定在个人博客 Jekyll 的基础之上，搭建一个基于 Nextcloud 的个人云盘服务。本站此前发布过一篇[《如何使用 ownCloud 搭建私有云盘》](https://voxsay.com/posts/how-to-install-and-configure-owncloud-on-centos-7/)的文章。
 
 Nextcloud 是由 ownCloud 创始人 Frank Karlitschek 于 2016 年创建。 Nextcloud 使用 PHP 和 JavaScript 编写，可帮助您通过桌面和移动设备同步、共享、访问您的数据并进行协作，它基于 Linux 系统构建。
 
@@ -92,12 +92,12 @@ $ sudo apt install php8.1 php8.1-cli php8.1-common php8.1-json php8.1-fpm php8.1
 
 ## 3.安装 SSL 证书
 
-使用 acme.sh 脚本生成免费的 SSL 证书，acme.sh 安装详见 [《如何给网站添加免费的 SSL/TLS 证书？》](https://xiaowangye.org/posts/how-to-apply-for-a-free-ssl-certificate-using-acme.sh/#21%E5%AE%89%E8%A3%85-acmesh:~:text=2.1.%E5%AE%89%E8%A3%85%20acme,%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%9A)文章。
+使用 acme.sh 脚本生成免费的 SSL 证书，acme.sh 安装详见 [《如何给网站添加免费的 SSL/TLS 证书？》](https://voxsay.com/posts/how-to-apply-for-a-free-ssl-certificate-using-acme.sh/#21%E5%AE%89%E8%A3%85-acmesh:~:text=2.1.%E5%AE%89%E8%A3%85%20acme,%E4%BB%A5%E4%B8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%9A)文章。
 
 1).生成证书
 
    ```bash
-   $ acme.sh --issue -d drive.xiaowangye.org \
+   $ acme.sh --issue -d drive.voxsay.com \
    	--webroot /var/www/nextcloud --force
    ```
 
@@ -115,16 +115,16 @@ $ mkdir -p /etc/certs
 安装证书并重启 Nginx，使证书生效：
 
 ```bash
-$ acme.sh --install-cert -d drive.xiaowangye.org \
-         --key-file /etc/certs/drive.xiaowangye.org.key \
-         --fullchain-file /etc/certs/drive.xiaowangye.org.pem \
+$ acme.sh --install-cert -d drive.voxsay.com \
+         --key-file /etc/certs/drive.voxsay.com.key \
+         --fullchain-file /etc/certs/drive.voxsay.com.pem \
          --reloadcmd "systemctl restart nginx"
 ```
 
 查看已安装的证书：
 
 ```bash
-$ acme.sh --info -d drive.xiaowangye.org
+$ acme.sh --info -d drive.voxsay.com
 ```
 
 ## 4.安装和配置 Nextcloud
@@ -165,7 +165,7 @@ $ sudo apt install nginx
 
 2).添加 Nextcloud 的 Nginx 配置：
 
-使用 `vim /etc/nginx/conf.d/drive.xiaowangye.org.conf` 命令编辑配置：
+使用 `vim /etc/nginx/conf.d/drive.voxsay.com.conf` 命令编辑配置：
 
 ```nginx
 upstream php-handler {
@@ -174,17 +174,17 @@ upstream php-handler {
 server {
     listen 80;
     listen [::]:80;
-    server_name drive.xiaowangye.org;
+    server_name drive.voxsay.com;
     return 301 https://$server_name:443$request_uri;
 }
 
 server {
     listen       443 ssl http2;
     listen       [::]:443 ssl http2;
-    server_name drive.xiaowangye.org;
+    server_name drive.voxsay.com;
     charset utf-8;
-    ssl_certificate /etc/certs/drive.xiaowangye.org.pem;
-    ssl_certificate_key /etc/certs/drive.xiaowangye.org.key;
+    ssl_certificate /etc/certs/drive.voxsay.com.pem;
+    ssl_certificate_key /etc/certs/drive.voxsay.com.key;
 
     root /var/www/nextcloud;
     index index.php index.html /index.php$request_uri;
@@ -199,7 +199,7 @@ server {
 $ systemctl restart nginx
 ```
 
-然后，打开 [https://drive.xiaowangye.org](https://drive.xiaowangye.org) 网页，根据安装向导完成 Nextcloud 的安装，安装成功的截图如下：
+然后，打开 [https://drive.voxsay.com](https://drive.voxsay.com) 网页，根据安装向导完成 Nextcloud 的安装，安装成功的截图如下：
 
 ![image-20231230150233708](/img/image-20231230150233708.png){: .shadow }
 
