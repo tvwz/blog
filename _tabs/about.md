@@ -4,17 +4,23 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## 个人简介
+## 关于博主
 
-我是**小王爷**，是一名 Java 开发工程师。我对技术充满热情，喜欢钻研新技术，并将其应用到实际工作中。
+网名小王爷，80 后，程序员，爱好“上网冲浪”，研究 GitHub 上各类开源好玩的项目。
+
+## 关于博客
+
+言外之音于 2023 年 10 月建立，起初博客名为小王爷，域名是 xiaowangye.org，寓意能像小王爷一样生活轻松惬意。12 月之前一直使用[黄玄](http://huangxuan.me/)的开源博客主题 [huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)。
+
+12 月在 GitHub 上找到一款很漂亮的主题 [Chirpy Jekyll Theme](https://github.com/cotes2020/jekyll-theme-chirpy)，随后将博客迁移到该模板 [chirpy-starter](https://github.com/cotes2020/chirpy-starter) ，一直沿用至今。
+
+2024 年 10 月，将博客迁移到新域名 [VoxSay.com](https://voxsay.com)。Vox 源自拉丁语，意为“声音”，Say 指英文中的“说”或“表达”。VoxSay 寓意通过声音或言语传达深层次的思想和观点。中文名言外之音，寓意聆听技术背后未尽之言，传递思想深处的智慧之声。
 
 ## 博客内容
 
-- 技术干货：分享我在软件开发领域的经验和心得，帮助大家提高技术水平。
-- 项目经验：分享我在各个项目中的经验和教训，帮助大家少走弯路。
-- 行业动态：分享软件开发领域最新的动态和趋势，帮助大家紧跟技术潮流。
+以编程、建站、科学上网、AI 等技术为主，分享博客文章。
 
-## 个人工具站
+## 工具站
 
 - [x.voxsay.com](https://x.voxsay.com)：个人专属备忘录，基于 [memos](https://github.com/usememos/memos) 构建。
 - [chat.voxsay.com](https://chat.voxsay.com)：个人专属 ChatGPT，支持 GPT 模型，基于 [Vercel](https://vercel.com/) 和 [Vercel ai-chatbot](https://github.com/vercel/ai-chatbot) 构建。
