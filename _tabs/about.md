@@ -29,6 +29,13 @@ order: 4
 - [md.voxsay.com](https://md.voxsay.com)：markdown 在线编辑器，支持一键拷贝内容到微信公众号、知乎和稀土掘金。
 - [wb.voxsay.com](https://wb.voxsay.com)：一款手绘风格的白板工具，基于 excalidraw 和 Cloudflare Pages 构建。
 
+## CN2 GIA VPS 推荐
+
+| 供应商 |   方案名称   |            主机配置            |   价格   |                           购买链接                           |   优惠码   |
+| :----: | :----------: | :----------------------------: | :------: | :----------------------------------------------------------: | :--------: |
+| 搬瓦工 | The DC9 Plan | 1C768MB, 15G, 750G/月, 1.5Gbps |  $38/年  | [购买链接](https://bandwagonhost.com/cart.php?a=add&pid=145) | BWHCCNCXVV |
+|  DMIT  | LAX.Pro.WEE  |  1C1G, 20G, 500G/月, 500Mbps   | $36.9/年 |    [购买链接](https://www.dmit.io/cart.php?a=add&pid=183)    |    暂无    |
+
 ## 结语
 
 欢迎大家访问我的博客，和我一起交流学习，共同进步，转载本站文章请注明作者和出处。
