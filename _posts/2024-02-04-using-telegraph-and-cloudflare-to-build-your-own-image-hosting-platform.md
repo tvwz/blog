@@ -35,35 +35,35 @@ title: 使用 Telegraph 和 Cloudflare 自建图床
 
 访问 [Telegraph-Image](https://github.com/cf-pages/Telegraph-Image) 仓库地址，fork 到个人仓库：
 
-![Snipaste_2024-02-04_14-54-35](/img/Snipaste_2024-02-04_14-54-35.png){: .shadow }
+![Snipaste_2024-02-04_14-54-35](/img/Snipaste_2024-02-04_14-54-35.webp){: .shadow }
 
 ### 2.创建应用并关联 Fork 的仓库
 
 在 Cloudflare 创建一个应用：
 
-![Snipaste_2024-02-04_14-57-45.png](/img/Snipaste_2024-02-04_14-57-45.png){: .shadow }
+![Snipaste_2024-02-04_14-57-45.webp](/img/Snipaste_2024-02-04_14-57-45.webp){: .shadow }
 
 然后切换到 Pages 页，点击 <kbd>Connect to Git</kbd> 按钮，选择指定仓库开始安装：
 
-![Snipaste_2024-02-04_14-57-45](/img/Snipaste_2024-02-04_14-57-45.png){: .shadow }
+![Snipaste_2024-02-04_14-57-45](/img/Snipaste_2024-02-04_14-57-45.webp){: .shadow }
 
 安装完成后，可通过 Cloudflare 自动分配的域名访问：
 
-![Snipaste_2024-02-04_15-40-56.png](/img/Snipaste_2024-02-04_15-40-56.png){: .shadow }
+![Snipaste_2024-02-04_15-40-56.webp](/img/Snipaste_2024-02-04_15-40-56.webp){: .shadow }
 
 ### 3.绑定自定义域名
 
 因特殊原因，Cloudflare 分配的域名 *.pages.dev 在国内无法访问，我们可通过绑定自定义域名绕开这个限制：
 
-![Snipaste_2024-02-04_15-38-00.png](/img/Snipaste_2024-02-04_15-38-00.png){: .shadow }
+![Snipaste_2024-02-04_15-38-00.webp](/img/Snipaste_2024-02-04_15-38-00.webp){: .shadow }
 
 完成绑定后，可通过 [img.voxsay.com](https://img.voxsay.com) 访问，访问页面如下图：
 
-![Snipaste_2024-02-04_14-40-04.png](/img/Snipaste_2024-02-04_14-40-04.png){: .shadow }
+![Snipaste_2024-02-04_14-40-04.webp](/img/Snipaste_2024-02-04_14-40-04.webp){: .shadow }
 
 我们测试下图片上传：
 
-![Snipaste_2024-02-04_14-44-30.png](/img/Snipaste_2024-02-04_14-44-30.png){: .shadow }
+![Snipaste_2024-02-04_14-44-30.webp](/img/Snipaste_2024-02-04_14-44-30.webp){: .shadow }
 
 复制上传后的文件访问地址，可通过浏览器正常打开。
 
@@ -78,19 +78,19 @@ Telegraph-Image 的图片管理功能默认是关闭的，我们需要绑定 KV 
 
 首先，依次点击 <kbd>Workers 和 Pages</kbd> > <kbd>KV</kbd> > <kbd>创建命名空间</kbd>，添加一个名为 `image-hosting` 的命名空间：
 
-![Snipaste_2024-02-04_16-55-48.png](/img/Snipaste_2024-02-04_16-55-48.png){: .shadow }
+![Snipaste_2024-02-04_16-55-48.webp](/img/Snipaste_2024-02-04_16-55-48.webp){: .shadow }
 
 然后，依次点击 <kbd>Workers 和 Pages</kbd> > <kbd>telegraph-image</kbd> 进入 Pages 设置页面：
 
-![Snipaste_2024-02-04_17-02-52.png](/img/Snipaste_2024-02-04_17-02-52.png){: .shadow }
+![Snipaste_2024-02-04_17-02-52.webp](/img/Snipaste_2024-02-04_17-02-52.webp){: .shadow }
 
 接着，切换至<kbd>设置</kbd>页签，点击<kbd>函数</kbd>子菜单：
 
-![Snipaste_2024-02-04_16-54-11.png](/img/Snipaste_2024-02-04_16-54-11.png){: .shadow }
+![Snipaste_2024-02-04_16-54-11.webp](/img/Snipaste_2024-02-04_16-54-11.webp){: .shadow }
 
 绑定我们刚刚创建的命名空间 `image-hosting`：
 
-![Snipaste_2024-02-04_16-54-51.png](/img/Snipaste_2024-02-04_16-54-51.png){: .shadow }
+![Snipaste_2024-02-04_16-54-51.webp](/img/Snipaste_2024-02-04_16-54-51.webp){: .shadow }
 
 变量名称设置为 `img_url`，KV 命名空间设置为 `image-hosting`。
 
@@ -105,7 +105,7 @@ Telegraph-Image 的图片管理功能默认是关闭的，我们需要绑定 KV 
 
 3.添加一个变量名称为 ModerateContentApiKey，值为第 1 步获得的 API key，点击保存即可。
 
-![Snipaste_2024-02-04_17-19-11.png](/img/Snipaste_2024-02-04_17-19-11.png){: .shadow }
+![Snipaste_2024-02-04_17-19-11.webp](/img/Snipaste_2024-02-04_17-19-11.webp){: .shadow }
 
 > 需在部署页面点击 <kbd>重试部署</kbd>才能生效。
 {: .prompt-tip }
@@ -114,4 +114,4 @@ Telegraph-Image 的图片管理功能默认是关闭的，我们需要绑定 KV 
 
 后台登录验证默认也是关闭的，要开启它，需要新增 `BASIC_USER` 和 `BASIC_PASS` 环境变量：
 
-![Snipaste_2024-02-04_17-27-06.png](/img/Snipaste_2024-02-04_17-27-06.png){: .shadow }
+![Snipaste_2024-02-04_17-27-06.webp](/img/Snipaste_2024-02-04_17-27-06.webp){: .shadow }

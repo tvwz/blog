@@ -10,7 +10,7 @@ tags:
 - PHP
 title: 使用 Nextcloud 搭建个人云盘服务
 image:
-  path: /img/nextcloud.png
+  path: /img/nextcloud.webp
 ---
 
 为了充分利用 VPS 服务器的资源，我决定在个人博客 Jekyll 的基础之上，搭建一个基于 Nextcloud 的个人云盘服务。本站此前发布过一篇[《如何使用 ownCloud 搭建私有云盘》](https://voxsay.com/posts/how-to-install-and-configure-owncloud-on-centos-7/)的文章。
@@ -201,8 +201,8 @@ $ systemctl restart nginx
 
 然后，打开 [https://drive.voxsay.com](https://drive.voxsay.com) 网页，根据安装向导完成 Nextcloud 的安装，安装成功的截图如下：
 
-![image-20231230150233708](/img/image-20231230150233708.png){: .shadow }
+![image-20231230150233708](/img/image-20231230150233708.webp){: .shadow }
 
 当然，我们也可以通过手机 APP 访问：
 
-![img](/img/image-20231230151533701.jpg){: w="300" h="400" .shadow}
+![img](/img/image-20231230151533701.webp){: w="300" h="400" .shadow}

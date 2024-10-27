@@ -10,7 +10,7 @@ tags:
 - Let’s Encrypt
 title: 如何给网站添加免费的 SSL/TLS 证书？
 image:
-  path: /img/letsencrypt.png
+  path: /img/letsencrypt.webp
 ---
 
 2017 年 1 月，Google 和 Mozilla 发布公告，为了帮助用户安全的浏览网页，统一将非 HTTPS 连接的站点标记为不安全，并且会在地址栏显示不安全网站的警告。为建立用户对网站的信任，提升网站的专业形象，同时为了加强用户和网站的数据安全，防止敏感信息的泄露，我们给网站添加 SSL/TLS 证书是很有必要的。

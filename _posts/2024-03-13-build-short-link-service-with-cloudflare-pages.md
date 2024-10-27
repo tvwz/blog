@@ -9,7 +9,7 @@ tags:
 - GitHub
 title: 如何使用 Cloudflare Pages 自建短链接服务？
 # image:
-#   path: /img/cloudflare-pages.png
+#   path: /img/cloudflare-pages.webp
 ---
 
 ## 短链接是什么？
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS logs (
 
 打开 [wss.so](https://wss.so) 页面，输入要转换的长网址，点击 <kbd>生成</kbd> 后的短链接如下图所示：
 
-![生成的短链接](/img/image-20240313140439336.png){: .shadow }
+![生成的短链接](/img/image-20240313140439336.webp){: .shadow }
 
 ### Step 5: API 方式使用
 

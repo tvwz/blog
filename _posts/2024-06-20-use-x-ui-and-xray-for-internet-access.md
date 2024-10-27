@@ -50,7 +50,7 @@ title: 如何使用 x-ui 和 xray 自建节点科学上网
 
 参考配置如下图所示：
 
-![DNS 设置](/img/image-20240620192809616.png){: .shadow}
+![DNS 设置](/img/image-20240620192809616.webp){: .shadow}
 
 > **为什么不使用一个域名？**有两个原因，一是 Cloudflare 开启 DNS 代理后，仅支持代理固定的几个端口，而我希望使用不同的 VPS 端口建立节点；二是 Cloudflare 开启 DNS 代理后，国内访问速度很慢，尤其是对于优质线路的服务器，如搬瓦工 CN2GIA 线路的 VPS，这种速度慢尤其浪费。
 {: .prompt-tip }
@@ -119,7 +119,7 @@ $ bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/ins
 
 在 x-ui 中新增一个节点，导航到**入站列表**，点击 <kbd>+</kbd> 按钮添加入站，配置入站信息，如下图：
 
-![入站配置](/img/image-20240620225430694.png){: .shadow}
+![入站配置](/img/image-20240620225430694.webp){: .shadow}
 
 
 ### Step 4: 客户端使用

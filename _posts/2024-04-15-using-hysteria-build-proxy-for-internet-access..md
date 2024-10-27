@@ -101,13 +101,13 @@ $ ufw allow 443/tcp
 
 下载 [V2RayN](https://github.com/2dust/v2rayN/releases) 最新版本，解压安装到 D 盘：
 
-![V2RayN 下载](/img/image-20240415171200377.png){: .shadow }
+![V2RayN 下载](/img/image-20240415171200377.webp){: .shadow }
 
 #### 2.下载 Hysteria 2 最新版本
 
 下载 [Hysteria](https://github.com/apernet/hysteria/releases)，并替换 `D:\v2rayN-With-Core\bin\hysteria2`{: .filepath} 目录下的文件：
 
-![Hysteria 下载](/img/image-20240415171310564.png){: .shadow }
+![Hysteria 下载](/img/image-20240415171310564.webp){: .shadow }
 
 #### 3.配置 Hysteria 2
 
@@ -136,7 +136,7 @@ http:
 
 打开 V2RayN 客户端，依次点击 <kbd>服务器</kbd> → <kbd>添加自定义配置服务器</kbd>，分别设置别名、地址、core 类型和 Socks 端口：
 
-![自定义服务器配置](/img/image-20240415171949015.png){: .shadow }
+![自定义服务器配置](/img/image-20240415171949015.webp){: .shadow }
 
 配置完成后，将该节点设置为活动服务器。
 
@@ -144,4 +144,4 @@ http:
 
 打开 [youtube.com](https://www.youtube.com) 可看到，我们已成功突破 Great Firewall 限制，实现了科学上网。
 
-![访问 Youtube](/img/image-20240415172420933.png){: .shadow }
+![访问 Youtube](/img/image-20240415172420933.webp){: .shadow }

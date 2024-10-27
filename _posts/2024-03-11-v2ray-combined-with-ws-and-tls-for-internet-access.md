@@ -10,7 +10,7 @@ tags:
 - Cloudflare
 title: 利用 V2Ray 结合 WS 和 TLS 进行高效上网
 image:
-  path: /img/v2ray.png
+  path: /img/v2ray.webp
 ---
 
 上一篇文章《[如何使用 V2Ray 科学上网？](https://voxsay.com/posts/how-to-use-v2ray-to-access-the-internet-friendly/)》，我介绍了如何使用 V2Ray 进行科学上网，但是在强大的 GFW 下，很容易被墙，本文将使用更加隐蔽的方式，使用 HTTPS 服务，进行流量伪装，突破网络限制。
@@ -150,11 +150,11 @@ V2ray一键脚本，运行之前请确认如下条件已经具备：
 
 我们将上面的**vmess连接**复制后导入到 V2RayN 客户端：
 
-![导入 V2RayN 客户端](/img/image-20240311094418694.png){: .shadow }
+![导入 V2RayN 客户端](/img/image-20240311094418694.webp){: .shadow }
 
 依次点击<kbd>服务器</kbd> > <kbd>从剪贴板导入批量URL</kbd>，导入完成后将其设置为活动服务器：
 
-![设置为活动服务器](/img/image-20240311085300325.png){: .shadow }
+![设置为活动服务器](/img/image-20240311085300325.webp){: .shadow }
 
 ### 5.加速 VPS 的访问速度
 
@@ -200,7 +200,7 @@ IP 地址           已发送  已接收  丢包率  平均延迟  下载速度 
 
 最后，将优选出来的IP **8.212.64.214** 配置到 V2RayN 客户端：
 
-![配置优选IP](/img/image-20240311091949284.png){: .shadow }
+![配置优选IP](/img/image-20240311091949284.webp){: .shadow }
 
 > 如何确定 IP 有没有代理 Cloudflare IP？访问 `http://<ip>/cdn-cgi/trace` 即可。
 {: .prompt-tip }

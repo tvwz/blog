@@ -231,4 +231,4 @@ $ ./cloudflared service install
 
 打开网址 [memos.wss.so]( https://memos.wss.so)，可看到我们已能成功访问到搭建的 memos 站点：
 
-![image-20240402081046375](/img/image-20240402081046375.png){: .shadow }
+![image-20240402081046375](/img/image-20240402081046375.webp){: .shadow }

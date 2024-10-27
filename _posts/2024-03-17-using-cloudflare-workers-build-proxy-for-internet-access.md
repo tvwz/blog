@@ -9,7 +9,7 @@ tags:
 - 科学上网
 title: 使用 Cloudflare Workers 自建节点科学上网
 image:
-  path: /img/cloudflare-workers.png
+  path: /img/cloudflare-workers.webp
 ---
 
 ## 简介
@@ -52,7 +52,7 @@ image:
 
     输入 [tunnel.wss.so](https://tunnel.wss.so) 验证 Worker 服务，然后输入 **https://tunnel.wss.so/{UUID}** 验证节点是否正常，若无问题则显示如下：
 
-    ![验证节点服务](/img/image-20240317103458169.png){: .shadow }
+    ![验证节点服务](/img/image-20240317103458169.webp){: .shadow }
 
 > 请将域名和 UUID 替换为自己的
 {: .prompt-tip }
@@ -77,7 +77,7 @@ image:
 
 - 最后，我们选择一个延迟低和速度快并<kbd>设为活动服务器</kbd>
 
-    ![节点服务器列表](/img/image-20240317104100726.png){: .shadow }
+    ![节点服务器列表](/img/image-20240317104100726.webp){: .shadow }
 
 ### 3.测试
 

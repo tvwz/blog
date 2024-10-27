@@ -8,7 +8,7 @@ tags:
 - 科学上网
 title: 如何使用 V2Ray 科学上网？
 image:
-  path: /img/v2ray.png
+  path: /img/v2ray.webp
 ---
 
 ## V2Ray 是什么？
@@ -70,24 +70,24 @@ v2ray 支持 Windows、macOS、Android 等客户端。v2rayN 为 Windows 客户�
 
 1.下载 V2RayN 客户端：
 
-![V2RayN 客户端下载](/img/image-20240308140228803.png){: .shadow }
+![V2RayN 客户端下载](/img/image-20240308140228803.webp){: .shadow }
 
 > v2rayN 运行依赖 Microsoft .NET 8.0 Desktop Runtime，需要提前安装，或者直接安装含运行时依赖安装包 [zz_v2rayN-With-Core-SelfContained.7z](https://github.com/2dust/v2rayN/releases/download/6.38/zz_v2rayN-With-Core-SelfContained.7z)
 {: .prompt-tip }
 
 2.解压安装到 D 盘，双击 v2rayN.exe 运行：
 
-![解压安装客户端](/img/image-20240308140415265.png){: .shadow }
+![解压安装客户端](/img/image-20240308140415265.webp){: .shadow }
 
 3.复制 vmess 链接点击<kbd>导入</kbd>：
 
-![导入 vmess 链接](/img/image-20240308141338997.png){: .shadow }
+![导入 vmess 链接](/img/image-20240308141338997.webp){: .shadow }
 
 选中后按 <kbd>Enter</kbd> 键设为活动服务器。
 
 4.访问 [google.com](https://www.google.com)：
 
-![访问 Google](/img/image-20240308141706769.png){: .shadow }
+![访问 Google](/img/image-20240308141706769.webp){: .shadow }
 
 可以看到，我们已成功实现科学上网。
 

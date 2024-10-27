@@ -57,7 +57,7 @@ $ systemctl restart docker
 
 借助 mitmproxy 工具，来抓取 `docker pull hello-world` 时发起的 HTTP 请求，如下图：
 
-![docker pull 请求抓包](/img/image-20240724092538691.png){: .shadow}
+![docker pull 请求抓包](/img/image-20240724092538691.webp){: .shadow}
 
 Docker 镜像拉取过程中的网络请求主要包含认证、镜像元数据获取、配置文件获取和镜像层下载四个阶段，具体的过程如下：
 
@@ -400,7 +400,7 @@ http {
 
 同样的，我们还是借助 mitmproxy 工具来抓取使用 Nginx 代理后，Docker 客户端发起的网络请求，以 `docker pull 410006.xyz/library/hello-world` 为例，发起的网络请求如下：
 
-![docker pull 代理请求抓包](/img/image-20240725123159291.png){: .shadow}
+![docker pull 代理请求抓包](/img/image-20240725123159291.webp){: .shadow}
 
 使用 Nginx 代理后，通过分析客户端发起的网络请求，得到 Docker 拉取镜像的网络请求时序图如下：
 

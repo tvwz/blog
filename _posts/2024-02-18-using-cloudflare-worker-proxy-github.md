@@ -8,7 +8,7 @@ tags:
 - GitHub
 title: 使用 Cloudflare Worker 镜像 GitHub 站点
 image:
-  path: /img/cloudflare-workers.png
+  path: /img/cloudflare-workers.webp
 ---
 
 ## Cloudflare Worker 简介
@@ -25,19 +25,19 @@ Cloudflare Worker 的主要用途包括网站加速和优化、路由请求、�
 
 首先，登录 Cloudflare，切换至<kbd>Workers & Pages</kbd>菜单，点击<kbd>Create Application</kbd>按钮：
 
-![Create Application](/img/image-20240218103029571.png){: .shadow }
+![Create Application](/img/image-20240218103029571.webp){: .shadow }
 
 然后，点击<kbd>Create Worker</kbd>按钮新建一个 Worker：
 
-![Create Worker](/img/image-20240218103511253.png){: .shadow }
+![Create Worker](/img/image-20240218103511253.webp){: .shadow }
 
 接着，设置一个三级域名 [gh.harrisonwang.workers.dev](https://gh.harrisonwang.workers.dev)，点击<kbd>Deploy</kbd>按钮：
 
-![Deploy](/img/image-20240218103833961.png){: .shadow }
+![Deploy](/img/image-20240218103833961.webp){: .shadow }
 
 再接着，我们点击<kbd>Edit code</kbd>按钮编辑代码：
 
-![Edit code](/img/image-20240218104251119.png){: .shadow }
+![Edit code](/img/image-20240218104251119.webp){: .shadow }
 
 最后，粘贴以下代码片段后，点击<kbd>Save and Deploy</kbd>完成部署，然后通过域名 [gh.harrisonwang.workers.dev](https://gh.harrisonwang.workers.dev) 访问镜像站：
 
@@ -184,18 +184,18 @@ async function device_status(user_agent_info) {
 
 至此，镜像 GitHub 站点已完成，我们任意搜索一个 `strapi` 的开源库，搜索结果如下图图所示。但是由于国内 `workers.dev` 域名的 DNS 已污染导致无法访问，所以需要绑定一个自定义域名来绕过该问题。
 
-![访问镜像站](/img/image-20240218105000144.png){: .shadow }
+![访问镜像站](/img/image-20240218105000144.webp){: .shadow }
 
 ### 2.绑定自定义域名
 
 首先，点击<kbd>Add Custom Domain</kbd>添加一个自定义域名：
 
-![添加自定义域名](/img/image-20240218110021092.png){: .shadow }
+![添加自定义域名](/img/image-20240218110021092.webp){: .shadow }
 
 然后，输入要绑定自定义域名如 [gh.wss.so](https://gh.wss.so)，点击<kbd>Add Custom Domain</kbd>绑定：
 
-![绑定自定义域名](/img/image-20240218110354890.png){: .shadow }
+![绑定自定义域名](/img/image-20240218110354890.webp){: .shadow }
 
 最后，等待 DNS 解析生效，然后使用 [gh.wss.so](https://gh.wss.so) 域名访问：
 
-![访问镜像站](/img/image-20240218111050210.png){: .shadow }
+![访问镜像站](/img/image-20240218111050210.webp){: .shadow }

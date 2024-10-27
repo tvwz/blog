@@ -33,21 +33,21 @@ Serv00.com 是一家提供免费虚拟主机服务的平台，使用 FreeBSD 的
 
 首先，将 Run your own applications 设置为 Enabled。
 
-![image-20240407143620216.png](/img/image-20240407143620216.png){: .shadow }
+![image-20240407143620216.webp](/img/image-20240407143620216.webp){: .shadow }
 
 > 若不开启，则用户目录下的所有文件都无法添加可执行权限。
 {: .prompt-info }
 
 然后，申请开放端口 5230 和 5231。
 
-![开放端口](/img/image-20240407143900008.png){: .shadow }
+![开放端口](/img/image-20240407143900008.webp){: .shadow }
 
 > 5230 为 memos 默认端口，5231 为 memos 的 gRPC 端口（监听端口+1）
 {: .prompt-info }
 
 接着，添加一个新站点，如下图示例：
 
-![添加新站点](/img/image-20240407144549305.png){: .shadow }
+![添加新站点](/img/image-20240407144549305.webp){: .shadow }
 
 > 站点类型选择为 Proxy，并选择 5230 服务端口。
 {: .prompt-info }
@@ -79,19 +79,19 @@ $ ./memos --mode prod -p 5230 --data /home/harrisonwang/domains/memos.harrisonwa
 
 首先，在 Zero Trust 控制台创建 memos 隧道：
 
-![1.创建隧道](/img/image-20240407145208819.png){: .shadow }
+![1.创建隧道](/img/image-20240407145208819.webp){: .shadow }
 
 然后，配置好 Public Hostname Page：
 
-![2.配置 Hostname](/img/image-20240407145329774.png){: .shadow }
+![2.配置 Hostname](/img/image-20240407145329774.webp){: .shadow }
 
 接着，拷贝 ARGO_TOKEN 并记录好：
 
-![3.拷贝 ARGO_TOKEN](/img/image-20240407145431752.png){: .shadow }
+![3.拷贝 ARGO_TOKEN](/img/image-20240407145431752.webp){: .shadow }
 
 最后，我们登录 Serv00 服务器安装 cloudflared，登录信息可到注册邮箱中查看：
 
-![4.查看登录信息](/img/image-20240407150316147.png){: .shadow }
+![4.查看登录信息](/img/image-20240407150316147.webp){: .shadow }
 
 依次执行以下命令进行安装和测试：
 
@@ -108,28 +108,28 @@ $ ./cloudflared tunnel --edge-ip-version auto --protocol http2 --heartbeat-inter
 
 ### 访问 memos 站点
 
-![访问 memos 站点](/img/image-20240407152118202.png){: .shadow }
+![访问 memos 站点](/img/image-20240407152118202.webp){: .shadow }
 
 我们登录后创建一个 Token，提供 chrome 浏览器扩展程序使用。
 
-![创建 Token](/img/image-20240407152050137.png){: .shadow }
+![创建 Token](/img/image-20240407152050137.webp){: .shadow }
 
 ### 安装 memos 的 chrome 浏览器扩展程序
 
 谷歌应用商店搜索 memos 扩展程序：
 
-![搜索 Memos](/img/image-20240407151821852.png){: .shadow }
+![搜索 Memos](/img/image-20240407151821852.webp){: .shadow }
 
 然后，配置对应的域名和 Token：
 
-![配置](/img/image-20240407152803280.png){: .shadow }
+![配置](/img/image-20240407152803280.webp){: .shadow }
 
 > 注意：域名必须包含 / 结束符，如：https://memos.voxsay.com/
 {: .prompt-info }
 
 配置完成后，我们可以很方便的使用浏览器插件发布 memos 了：
 
-![发布 memos](/img/image-20240407153314648.png){: .shadow }
+![发布 memos](/img/image-20240407153314648.webp){: .shadow }
 
 ### 集成到 Telegram
 

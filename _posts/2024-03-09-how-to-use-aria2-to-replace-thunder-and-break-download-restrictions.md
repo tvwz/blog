@@ -89,7 +89,7 @@ Aria2 简单配置信息：
 
 我们使用其提供的[公共 AriaNg 链接](https://ariang.js.org/#!/settings/rpc/set/ws/158.247.205.221/6800/jsonrpc/NGIzOTA5NDg0ZmE5Mzk0Yzc5Y2I=)，当作前端面板使用。
 
-![公共 AriaNg 面板界面](/img/image-20240309204459795.png){: .shadow }
+![公共 AriaNg 面板界面](/img/image-20240309204459795.webp){: .shadow }
 
 > Ar­i­aNg 只是一个静态网页，只负责发送指令给 Aria2 服务端，所填写的 RPC 地址和 RPC 密钥等设置数据只会储存在本地浏览器中，不管是在本地直接打开使用，还是访问在线网页使用，都只是本地浏览器到远端 Aria2 服务的 RPC 协议通讯。
 {: .prompt-tip }
@@ -175,4 +175,4 @@ p3terx/ariang
 
 最后，打开 [https://158.247.205.221:6880](https://158.247.205.221:6880) 地址后显示如下：
 
-![Docker 搭建的 AriaNg 面板](/img/image-20240309203827922.png){: .shadow }
+![Docker 搭建的 AriaNg 面板](/img/image-20240309203827922.webp){: .shadow }

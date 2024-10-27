@@ -48,7 +48,7 @@ ChatGPT 是 OpenAI 公司开发的一款人工智能聊天机器人程序，而 
 
 科学上网后，手机浏览器打开 [google.com](https://google.com) 站点，搜索“Google Play 下载”，点击 Google Play 服务下载 Google Play 完成安装，如下图所示：
 
-![Google Play 下载](/img/image-20240615225334997.png){: w="300" h="400" .shadow}
+![Google Play 下载](/img/image-20240615225334997.webp){: w="300" h="400" .shadow}
 
 或者使用 [APKPure](https://apkpure.com/) 和 [softonic](https://softonic.com/) 等第三方平台下载 Google Play ，下载地址如下：
 
@@ -96,7 +96,7 @@ ChatGPT 是 OpenAI 公司开发的一款人工智能聊天机器人程序，而 
 
 在手机端，通过 Google Play 商店安装好 ChatGPT APP 后，使用刚刚注册的 ChatGPT 账号完成登录，接着点击 <kbd>...</kbd> 按钮进入设置界面，然后点击 <kbd>订阅</kbd> 按钮进入订阅界面，最后点击 <kbd>订阅</kbd> 按钮完成 ChatGPT Plus 的订阅。设置页面如下图所示：
 
-![ChatGPT 设置](/img/image-20240616001513916.png){: w="300" h="400" .shadow}
+![ChatGPT 设置](/img/image-20240616001513916.webp){: w="300" h="400" .shadow}
 
 **为什么科学上网后无法正常使用 ChatGPT APP？**
 

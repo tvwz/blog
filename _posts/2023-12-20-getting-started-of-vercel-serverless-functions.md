@@ -106,7 +106,7 @@ No framework detected. Default Project Settings:
 
 浏览器访问 http://localhost:3000/api/app?name=Vercel 接口，可以看到成功返回“Hello Vercel!”消息：
 
-![image-20231220125423697](/img/image-20231220125423697.png){: .shadow }
+![image-20231220125423697](/img/image-20231220125423697.webp){: .shadow }
 
 ### Step 8：发布到 Vercel
 
@@ -119,21 +119,21 @@ Vercel CLI 33.0.0
 
 执行完成后，可以看到 Vercel 给我们生成了一个默认域名 `https://vercel-serverless-functions-83y10f6fk-harrison-wangs-projects.vercel.app`，我们将参数 `name` 拼接上，使用浏览器访问 `https://vercel-serverless-functions-bay.vercel.app/api/app?name=GitHub` 接口，可以看到成功返回“Hello GitHub!”消息：
 
-![image-20231220130920834](/img/image-20231220130920834.png){: .shadow }
+![image-20231220130920834](/img/image-20231220130920834.webp){: .shadow }
 
 ### Step 9：绑定自定义域名
 
 打开 Vercel 地址，选中 vercel-serverless-functions 项目，点击 Manage Domains：
 
-![image-20231220140131095](/img/image-20231220140131095.png){: .shadow }
+![image-20231220140131095](/img/image-20231220140131095.webp){: .shadow }
 
 添加自定义域名 `vercel.voxsay.com`：
 
-![image-20231220140318881](/img/image-20231220140318881.png){: .shadow }
+![image-20231220140318881](/img/image-20231220140318881.webp){: .shadow }
 
 然后我们将 Vercel 提供的 CNAME 记录，添加到 Cloudflare DNS 记录：
 
-![image-20231220140533989](/img/image-20231220140533989.png){: .shadow }
+![image-20231220140533989](/img/image-20231220140533989.webp){: .shadow }
 
 DNS 记录设置完成后，我们可通过地址 `https://vercel.voxsay.com/api/app?name=world` 访问到接口：
 

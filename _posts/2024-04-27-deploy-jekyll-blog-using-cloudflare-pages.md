@@ -15,11 +15,11 @@ title: 使用 Cloudflare Pages 免费部署 Jekyll 博客
 
 此前个人博客站点和代理服务一直共用 443 端口，猜测是国内审查机构发现 443 端口不仅用于正常的 HTTPS 通信，而且被用来传输用于翻墙的数据，所以封锁或限制了该端口的流量。
 
-![443 端口被墙](/img/image-20240427160327782.png){: .shadow }
+![443 端口被墙](/img/image-20240427160327782.webp){: .shadow }
 
 使用搬瓦工提供的工具检测如下：
 
-![IP 被阻断](/img/image-20240427164741162.png){: .shadow }
+![IP 被阻断](/img/image-20240427164741162.webp){: .shadow }
 
 > 只能将科学上网工具从服务器上移除，静等 GFW 自行清除了😅。
 {: .prompt-info }
@@ -40,7 +40,7 @@ title: 使用 Cloudflare Pages 免费部署 Jekyll 博客
 
 访问仓库地址，创建一个新仓库：
 
-![创建新仓库](/img/image-20240427161459991.png){: .shadow }
+![创建新仓库](/img/image-20240427161459991.webp){: .shadow }
 
 ### 2.创建 Cloudflare Pages
 
@@ -57,12 +57,12 @@ title: 使用 Cloudflare Pages 免费部署 Jekyll 博客
 
 出现该问题的原因是 Cloudflare Pages 的构建系统中，设置了默认的环境变量 `BUNDLE_WITHOUT` 值，旨在通过避免安装不需要的 gem 来优化构建时间，致使其排除了 Jekyll 需要的 gem。解决办法很简单，就是给 `BUNDLE_WITHOUT` 添加一个默认的空字串值，如下：
 
-| 变量名称       | 值   |
-| -------------- | ---- |
-| `BUNDLE_WITHOUT` | `""`   |
+| 变量名称         | 值   |
+| ---------------- | ---- |
+| `BUNDLE_WITHOUT` | `""` |
 
 ### 4.绑定自定义域名
 
 切换到自定义域选项卡，添加自定义域名：
 
-![image-20240427163304835](/img/image-20240427163304835.png){: .shadow }
+![image-20240427163304835](/img/image-20240427163304835.webp){: .shadow }

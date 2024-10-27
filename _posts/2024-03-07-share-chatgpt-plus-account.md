@@ -194,25 +194,25 @@ $ docker logs cws -f
 
 首先，登录 ChatGPT，使用 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> 按键开启浏览器调试模式，然后切换到 GPT-4 模型，开启新的会话，找到 `https://tcr9i.chat.openai.com/fc/gt2/public_key/35536E1E-65B4-4D96-9D97-6ADB7EFF8147` 的网络请求：
 
-![image-20240307135422604](/img/image-20240307135422604.png){: .shadow }
+![image-20240307135422604](/img/image-20240307135422604.webp){: .shadow }
 
 然后，右键**以 HAR 格式保存所有内容**将文件保存到桌面：
 
-![image-20240307135507421](/img/image-20240307135507421.png){: .shadow }
+![image-20240307135507421](/img/image-20240307135507421.webp){: .shadow }
 
 接着，我们在 VPS 服务器上将 ninja 的 `7999` 端口临时放开， 然后打开 HAR 文件上传地址 `http://<ip>:7999/har/upload`，上传 har 文件，上传完成后记得将 `7999` 端口取消外网访问，上传完成后的界面如下：
 
-![image-20240307140624816](/img/image-20240307140624816.png){: .shadow }
+![image-20240307140624816](/img/image-20240307140624816.webp){: .shadow }
 
 ### 6. 后台配置 CWS
 
 首先，打开 `https://chat.openai.com/api/auth/session` 页面，复制 access token：
 
-![image-20240307141757620](/img/image-20240307141757620.png){: .shadow }
+![image-20240307141757620](/img/image-20240307141757620.webp){: .shadow }
 
 然后，登录 CWS 后台 `http://<ip>:5000/admin/system`，点击系统配置菜单，切换至 <kbd>credentials</kbd> 页签，粘贴复制 access token，点击<kbd>保存</kbd>：
 
-![image-20240307141311223](/img/image-20240307141311223.png){: .shadow }
+![image-20240307141311223](/img/image-20240307141311223.webp){: .shadow }
 
 至此，所有的配置均已完成，我们可共享 ChatGPT Plus 账号的使用了。
 
@@ -220,19 +220,19 @@ $ docker logs cws -f
 
 首先，我们切换到用户管理菜单，点击 <kbd>添加用户</kbd> 按钮进入添加用户页面，输入新用户信息然后点击<kbd>保存</kbd>：
 
-![image-20240307142804120](/img/image-20240307142804120.png){: .shadow }
+![image-20240307142804120](/img/image-20240307142804120.webp){: .shadow }
 
 然后，我们给新账号设置 100 次调用 gpt_4，如下图：
 
-![image-20240307143302927](/img/image-20240307143302927.png){: .shadow }
+![image-20240307143302927](/img/image-20240307143302927.webp){: .shadow }
 
 接着，我们切换到新用户登录，新建一个学习助手的会话：
 
-![image-20240307143056110](/img/image-20240307143056110.png){: .shadow }
+![image-20240307143056110](/img/image-20240307143056110.webp){: .shadow }
 
 最后，任意输入消息后返回如下图：
 
-![image-20240307143549067](/img/image-20240307143549067.png){: .shadow }
+![image-20240307143549067](/img/image-20240307143549067.webp){: .shadow }
 
 ## 参考文档
 

@@ -315,13 +315,13 @@ const createNotFoundResponse = (routes) => new Response(
 
 点击 `docker` 进入 Worker 页面，点击 <kbd>设置</kbd> > <kbd>触发器</kbd> > <kbd>添加自定义域</kbd>，输入你要绑定的域名，等待创建完成，如下图所示：
 
-![绑定自定义域名](/img/image-20240625195525582.png){: .shadow}
+![绑定自定义域名](/img/image-20240625195525582.webp){: .shadow}
 
 ### Step 3: 访问镜像代理首页
 
 访问域名 [dp.410006.xyz](https://dp.410006.xyz)，可查看镜像代理的使用说明：
 
-![镜像代理使用说明](/img/image-20240625194226330.png){: .shadow}
+![镜像代理使用说明](/img/image-20240625194226330.webp){: .shadow}
 
 ## 总结
 
